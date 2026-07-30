@@ -1,18 +1,25 @@
-import Image from "next/image";
-import Navbar from "./components/Navbar";
-
-import HeroSection from "./components/heroSection";
-import ServicesSection from "./components/ServicesSection";
-import HowItWorks from "./components/HowItWorks";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import MissionValues from "./components/MissionValues";
+import Team from "./components/Team";
+import Stats from "./components/Stats";
+import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import MicroInteractions from "./components/MicroInteractions";
 
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <ServicesSection />
-      <HowItWorks />
-      {/* Other sections can go here */}
+      <Header />
+      <main className="wave-bg">
+        <Hero />
+        <MissionValues />
+        <Team />
+        <Stats />
+        <CTA />
+      </main>
+      <Footer />
+      <MicroInteractions />
     </>
   );
 }

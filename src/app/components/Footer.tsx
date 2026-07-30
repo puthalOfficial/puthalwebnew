@@ -1,182 +1,166 @@
-"use client";
+export default function Footer() {
+  return (
+    <footer className="bg-surface-container dark:bg-inverse-surface mt-12 border-t border-outline-variant/20">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max-width mx-auto">
+        <div className="md:col-span-1">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="text-headline-md font-headline-md font-bold text-deep-ocean tracking-tight">
+              Puthal
+            </span>
+          </div>
+          <p className="text-on-surface-variant text-body-md mb-6 leading-relaxed">
+            Empowering the next generation of digital wellness through
+            innovative technology and human-centric design.
+          </p>
+          <div className="flex gap-4">
+            <span className="material-symbols-outlined p-2 rounded-full bg-surface-container-high text-primary cursor-pointer hover:bg-primary-container hover:text-white transition-all">
+              public
+            </span>
+            <span className="material-symbols-outlined p-2 rounded-full bg-surface-container-high text-primary cursor-pointer hover:bg-primary-container hover:text-white transition-all">
+              language
+            </span>
+            <span className="material-symbols-outlined p-2 rounded-full bg-surface-container-high text-primary cursor-pointer hover:bg-primary-container hover:text-white transition-all">
+              hub
+            </span>
+          </div>
+        </div>
 
-import React from "react";
-import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Twitter, Instagram, Linkedin, Github, ExternalLink } from "lucide-react";
-import Link from "next/link";
-import { Variants } from "framer-motion";
+        <div>
+          <h4 className="text-label-sm font-label-sm font-bold text-primary uppercase mb-6">
+            Company
+          </h4>
+          <ul className="space-y-4">
+            <li>
+              <a
+                className="text-on-surface-variant hover:text-primary transition-colors text-body-md"
+                href="#"
+              >
+                About Us
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-on-surface-variant hover:text-primary transition-colors text-body-md"
+                href="#"
+              >
+                Our Services
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-on-surface-variant hover:text-primary transition-colors text-body-md"
+                href="#"
+              >
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-on-surface-variant hover:text-primary transition-colors text-body-md"
+                href="#"
+              >
+                Careers
+              </a>
+            </li>
+          </ul>
+        </div>
 
-const smoothReveal: Variants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: (i: number) => ({
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.8,
-            delay: i * 0.1,
-            ease: "easeOut",
-        },
-    }),
-};
+        <div>
+          <h4 className="text-label-sm font-label-sm font-bold text-primary uppercase mb-6">
+            Support
+          </h4>
+          <ul className="space-y-4">
+            <li>
+              <a
+                className="text-on-surface-variant hover:text-primary transition-colors text-body-md"
+                href="#"
+              >
+                Help Center
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-on-surface-variant hover:text-primary transition-colors text-body-md"
+                href="#"
+              >
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-on-surface-variant hover:text-primary transition-colors text-body-md"
+                href="#"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-on-surface-variant hover:text-primary transition-colors text-body-md"
+                href="#"
+              >
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
 
-const Footer = () => {
-    const currentYear = new Date().getFullYear();
+        <div>
+          <h4 className="text-label-sm font-label-sm font-bold text-primary uppercase mb-6">
+            Contact
+          </h4>
+          <ul className="space-y-4 text-on-surface-variant text-body-md">
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-secondary">
+                mail
+              </span>
+              hello@puthal.com
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-secondary">
+                call
+              </span>
+              +91 7724816439
+            </li>
+            <li className="mt-8">
+              <div className="p-4 bg-surface-container-low rounded-xl border border-outline-variant/30">
+                <p className="text-label-sm font-label-sm font-bold text-primary mb-2">
+                  Global HQ
+                </p>
+                <p className="text-label-sm font-label-sm">
+                  Coastal Wellness Tower, Sector 45, Mumbai, India
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-    const footerLinks = [
-        {
-            title: "Company",
-            links: [
-                { name: "About Us", href: "/about" },
-                { name: "Our Services", href: "/services" },
-                { name: "Contact", href: "/contact" },
-                { name: "Careers", href: "/careers" }
-            ]
-        },
-        {
-            title: "Support",
-            links: [
-                { name: "Help Center", href: "/help" },
-                { name: "Terms of Service", href: "/terms" },
-                { name: "Privacy Policy", href: "/privacy" },
-                { name: "FAQ", href: "/faq" }
-            ]
-        }
-    ];
-
-    const socialLinks = [
-        { icon: Twitter, href: "#", name: "Twitter" },
-        { icon: Instagram, href: "#", name: "Instagram" },
-        { icon: Linkedin, href: "#", name: "LinkedIn" },
-        { icon: Github, href: "#", name: "GitHub" }
-    ];
-
-    return (
-        <footer className="bg-white border-t border-purple-50 pt-24 pb-12 relative overflow-hidden">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-100 to-transparent" />
-
-            <div className="max-w-7xl mx-auto px-8 md:px-12">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
-                    {/* Brand Section */}
-                    <motion.div
-                        variants={smoothReveal}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        custom={0}
-                        className="lg:col-span-5 space-y-8"
-                    >
-                        <Link href="/" className="inline-block">
-                            <h2 className="text-3xl font-black tracking-tighter text-[#1a0a2a]">
-                                Puthal<span className="text-purple-600">Web</span>
-                            </h2>
-                        </Link>
-                        <p className="text-slate-500 font-medium leading-relaxed max-w-sm">
-                            Empowering the next generation of digital wellness through innovative technology and human-centric design.
-                        </p>
-
-                        <div className="space-y-4">
-                            <div className="flex items-center gap-3 text-slate-600 group cursor-pointer hover:text-purple-600 transition-colors">
-                                <div className="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center group-hover:bg-purple-100 transition-colors">
-                                    <Mail size={18} />
-                                </div>
-                                <span className="text-sm font-bold">rochakjainjs2005@gmail.com</span>
-                            </div>
-                            <div className="flex items-center gap-3 text-slate-600 group cursor-pointer hover:text-purple-600 transition-colors">
-                                <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                                    <Phone size={18} />
-                                </div>
-                                <span className="text-sm font-bold">+91 7724816439</span>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    {/* Links Sections */}
-                    <motion.div
-                        variants={smoothReveal}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        custom={1}
-                        className="lg:col-span-4 grid grid-cols-2 gap-8"
-                    >
-                        {footerLinks.map((section, idx) => (
-                            <div key={idx} className="space-y-6">
-                                <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#1a0a2a]">
-                                    {section.title}
-                                </h3>
-                                <ul className="space-y-4">
-                                    {section.links.map((link, linkIdx) => (
-                                        <li key={linkIdx}>
-                                            <Link
-                                                href={link.href}
-                                                className="text-slate-500 hover:text-purple-600 text-sm font-semibold transition-colors flex items-center gap-1 group"
-                                            >
-                                                {link.name}
-                                                <ExternalLink size={12} className="opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </motion.div>
-
-                    {/* Newsletter/Socials Section */}
-                    <motion.div
-                        variants={smoothReveal}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        custom={2}
-                        className="lg:col-span-3 space-y-8"
-                    >
-                        <div className="space-y-6">
-                            <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#1a0a2a]">
-                                Follow Us
-                            </h3>
-                            <div className="flex flex-wrap gap-4">
-                                {socialLinks.map((social, idx) => (
-                                    <motion.a
-                                        key={idx}
-                                        href={social.href}
-                                        whileHover={{ y: -4 }}
-                                        className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-600 hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-all duration-300 shadow-sm"
-                                        title={social.name}
-                                    >
-                                        <social.icon size={20} />
-                                    </motion.a>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="p-6 bg-purple-50 rounded-[2rem] border border-purple-100">
-                            <p className="text-xs font-bold text-purple-900 leading-relaxed">
-                                Join our community and stay updated with the latest in digital wellness.
-                            </p>
-                        </div>
-                    </motion.div>
-                </div>
-
-                {/* Bottom Bar */}
-                <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-slate-400 text-xs font-medium">
-                        © {currentYear} PuthalWeb. All rights reserved.
-                    </p>
-                    <div className="flex items-center gap-8">
-                        <Link href="/privacy" className="text-slate-400 hover:text-purple-600 text-[10px] font-black uppercase tracking-widest transition-colors">
-                            Privacy
-                        </Link>
-                        <Link href="/terms" className="text-slate-400 hover:text-purple-600 text-[10px] font-black uppercase tracking-widest transition-colors">
-                            Terms
-                        </Link>
-                        <Link href="/cookies" className="text-slate-400 hover:text-purple-600 text-[10px] font-black uppercase tracking-widest transition-colors">
-                            Cookies
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
-};
-
-export default Footer;
+      <div className="px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant/20 max-w-container-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="text-label-sm font-label-sm text-on-surface-variant">
+          © 2024 Puthal. Coastal Wellness for All.
+        </p>
+        <div className="flex gap-8">
+          <a
+            className="text-label-sm font-label-sm text-on-surface-variant hover:text-primary"
+            href="#"
+          >
+            Privacy
+          </a>
+          <a
+            className="text-label-sm font-label-sm text-on-surface-variant hover:text-primary"
+            href="#"
+          >
+            Terms
+          </a>
+          <a
+            className="text-label-sm font-label-sm text-on-surface-variant hover:text-primary"
+            href="#"
+          >
+            Cookies
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}

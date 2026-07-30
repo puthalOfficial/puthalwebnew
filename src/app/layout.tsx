@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Nunito } from "next/font/google";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import PageTransition from "./components/PageTransition";
-import BackgroundDecor from "./components/BackgroundDecor";
-import SmoothScroll from "./components/SmoothScroll";
+
 import "./globals.css";
 
 const poppins = Poppins({
@@ -34,14 +30,12 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${nunito.variable} antialiased font-body bg-[#fdfaff] min-h-screen text-[#1a0a2a]`}
       >
-        <Navbar />
-        <BackgroundDecor />
+        
         <main>
-          <SmoothScroll>
-            <PageTransition>{children}</PageTransition>
-          </SmoothScroll>
+          {children}
+          
         </main>
-        <Footer />
+  
 
       </body>
     </html>
