@@ -1,43 +1,48 @@
-"use client"
-import Image from "next/image";
+"use client";
 
 export default function Hero() {
   return (
-    <section className="relative pt-16 pb-24 md:pt-24 md:pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto overflow-hidden">
+    <section className="relative pt-16 pb-24 md:pt-24 md:pb-32 px-[16px] md:px-[48px] max-w-[1200px] mx-auto overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="z-10">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm font-label-sm mb-6 uppercase tracking-wider">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-[#9cecfb] text-[#016d7a] text-[12px] leading-[16px] tracking-[0.05em] font-[Inter] font-semibold mb-6 uppercase tracking-wider">
             Our Vision
           </span>
-          <h1 className="text-display-lg font-display-lg text-on-surface mb-6 leading-tight">
+
+          <h1 className="text-[48px] leading-[56px] tracking-[-0.02em] font-bold font-[Manrope] text-[#191c1e] mb-6 leading-tight">
             Empowering the next generation of{" "}
             <span className="text-gradient">digital wellness.</span>
           </h1>
-          <p className="text-body-lg font-body-lg text-on-surface-variant mb-8 max-w-xl">
+
+          <p className="text-[18px] leading-[28px] font-normal font-[Inter] text-[#404850] mb-8 max-w-xl">
             At Puthal, we bridge the gap between human empathy and
             technological precision. Our sanctuary is designed to help you
             navigate emotional landscapes with clarity and peace.
           </p>
+
           <div className="flex flex-wrap gap-4">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high border border-outline-variant/30">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#e6e8ea] border border-[#bfc7d1]/30">
               <span
-                className="material-symbols-outlined text-primary"
+                className="material-symbols-outlined text-[#005d90]"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
                 verified
               </span>
-              <span className="text-label-md font-label-md">
+
+              <span className="text-[14px] leading-[20px] tracking-[0.01em] font-[Inter] font-medium">
                 12K+ Users Globally
               </span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high border border-outline-variant/30">
+
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#e6e8ea] border border-[#bfc7d1]/30">
               <span
-                className="material-symbols-outlined text-secondary"
+                className="material-symbols-outlined text-[#006875]"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
                 star
               </span>
-              <span className="text-label-md font-label-md">
+
+              <span className="text-[14px] leading-[20px] tracking-[0.01em] font-[Inter] font-medium">
                 50+ Specialists
               </span>
             </div>
@@ -45,7 +50,8 @@ export default function Hero() {
         </div>
 
         <div className="relative group">
-          <div className="absolute -inset-4 bg-primary-container/10 rounded-[2rem] blur-2xl group-hover:bg-primary-container/20 transition-all" />
+          <div className="absolute -inset-4 bg-[#0077b6]/10 rounded-[2rem] blur-2xl group-hover:bg-[#0077b6]/20 transition-all" />
+
           <div className="relative rounded-[1.5rem] overflow-hidden shadow-2xl glass-card aspect-[4/3] border border-white/40">
             <img
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -54,13 +60,14 @@ export default function Hero() {
               width={800}
               height={600}
               sizes="(max-width: 768px) 100vw, 50vw"
-            
             />
+
             <div className="absolute bottom-6 left-6 right-6 p-6 glass-card rounded-xl border border-white/20 shadow-lg">
-              <p className="text-primary font-headline-md text-headline-md italic">
+              <p className="text-[#005d90] text-[24px] leading-[32px] font-[Manrope] font-semibold italic">
                 &ldquo;Peace of mind, redefined.&rdquo;
               </p>
-              <p className="text-on-surface-variant text-label-sm font-label-sm mt-1 uppercase tracking-widest">
+
+              <p className="text-[#404850] text-[12px] leading-[16px] tracking-[0.05em] font-[Inter] font-semibold mt-1 uppercase tracking-widest">
                 Our Core Philosophy
               </p>
             </div>

@@ -29,21 +29,24 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section className="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+    <section className="py-24 px-[16px] md:px-[48px] max-w-[1200px] mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
         <div className="max-w-2xl">
-          <span className="text-primary font-bold text-label-sm uppercase tracking-widest mb-4 block">
+          <span className="text-[#005d90] font-bold text-[12px] leading-[16px] tracking-[0.05em] font-[Inter] uppercase tracking-widest mb-4 block">
             Meet The Experts
           </span>
-          <h2 className="text-display-lg font-display-lg text-on-surface">
+
+          <h2 className="text-[48px] leading-[56px] tracking-[-0.02em] font-bold font-[Manrope] text-[#191c1e]">
             The Minds Behind the Peace
           </h2>
-          <p className="text-body-lg font-body-lg text-on-surface-variant mt-4">
+
+          <p className="text-[18px] leading-[28px] font-[Inter] font-normal text-[#404850] mt-4">
             Our diverse team of clinicians, designers, and engineers share a
             single goal: making mental wellness a universal standard.
           </p>
         </div>
-        <button className="flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-colors">
+
+        <button className="flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-[#005d90] text-[#005d90] font-bold hover:bg-[#005d90]/5 transition-colors">
           Join Our Mission
         </button>
       </div>
@@ -51,7 +54,7 @@ export default function Team() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {teamMembers.map((member) => (
           <div className="group" key={member.name}>
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 shadow-md bg-surface-container">
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 shadow-md bg-[#eceef0]">
               <img
                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
                 alt={member.alt}
@@ -60,21 +63,25 @@ export default function Team() {
                 height={600}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
                 <div className="flex gap-4 text-white">
-                  <span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">
+                  <span className="material-symbols-outlined cursor-pointer hover:text-[#9feffe] transition-colors">
                     share
                   </span>
-                  <span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">
+
+                  <span className="material-symbols-outlined cursor-pointer hover:text-[#9feffe] transition-colors">
                     mail
                   </span>
                 </div>
               </div>
             </div>
-            <h4 className="text-headline-md font-headline-md text-on-surface">
+
+            <h4 className="text-[24px] leading-[32px] font-[Manrope] font-semibold text-[#191c1e]">
               {member.name}
             </h4>
-            <p className="text-label-md font-label-md text-primary uppercase">
+
+            <p className="text-[14px] leading-[20px] tracking-[0.01em] font-[Inter] font-medium text-[#005d90] uppercase">
               {member.role}
             </p>
           </div>
