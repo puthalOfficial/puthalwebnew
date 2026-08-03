@@ -1,25 +1,19 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import MissionValues from "./components/MissionValues";
-import Team from "./components/Team";
-import Stats from "./components/Stats";
-import CTA from "./components/CTA";
-import Footer from "./components/Footer";
-import MicroInteractions from "./components/MicroInteractions";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import ServicesBento from "@/components/ServicesBento";
+import RecoveryJourney from "@/components/RecoveryJourney";
+import SupportCTA from "@/components/SupportCTA";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main className="wave-bg">
-        <Hero />
-        <MissionValues />
-        <Team />
-        <Stats />
-        <CTA />
-      </main>
+      <Navbar />
+      <Hero />
+      <ServicesBento />
+      <RecoveryJourney />
+      <SupportCTA />
       <Footer />
-      <MicroInteractions />
     </>
   );
 }

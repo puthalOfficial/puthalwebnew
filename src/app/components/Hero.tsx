@@ -1,72 +1,52 @@
-"use client"
 import Image from "next/image";
+import FloatingFocusCard from "./FloatingFocusCard";
 
 export default function Hero() {
   return (
-    <section className="relative pt-16 pb-24 md:pt-24 md:pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="z-10">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm font-label-sm mb-6 uppercase tracking-wider">
-            Our Vision
-          </span>
-          <h1 className="text-display-lg font-display-lg text-on-surface mb-6 leading-tight">
-            Empowering the next generation of{" "}
-            <span className="text-gradient">digital wellness.</span>
+    <header className="pt-32 pb-20 relative overflow-hidden">
+      <div className="absolute inset-0 -z-10 bg-wave-gradient"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-full opacity-20 pointer-events-none"></div>
+
+      <div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="space-y-6">
+          <div className="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-label-sm font-label-sm">
+            <span className="material-symbols-outlined text-[16px]">
+              verified
+            </span>
+            Trusted by 12K+ Users Globally
+          </div>
+          <h1 className="text-display-lg font-display-lg text-deep-ocean leading-tight">
+            Coastal Serenity for Your Mental Wellness
           </h1>
-          <p className="text-body-lg font-body-lg text-on-surface-variant mb-8 max-w-xl">
-            At Puthal, we bridge the gap between human empathy and
-            technological precision. Our sanctuary is designed to help you
-            navigate emotional landscapes with clarity and peace.
+          <p className="text-body-lg font-body-lg text-on-surface-variant max-w-lg">
+            Mann ki Uthal, Solve on Puthal. Navigate your emotional journey
+            with professional tools and guided support in a digital
+            sanctuary.
           </p>
           <div className="flex flex-wrap gap-4">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high border border-outline-variant/30">
-              <span
-                className="material-symbols-outlined text-primary"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                verified
-              </span>
-              <span className="text-label-md font-label-md">
-                12K+ Users Globally
-              </span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high border border-outline-variant/30">
-              <span
-                className="material-symbols-outlined text-secondary"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                star
-              </span>
-              <span className="text-label-md font-label-md">
-                50+ Specialists
-              </span>
-            </div>
+            <button className="bg-primary-container text-on-primary-container px-8 py-3 rounded-lg font-bold hover:shadow-lg transition-shadow">
+              Start Your Assessment
+            </button>
+            <button className="border border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-primary/5 transition-colors">
+              Explore Modules
+            </button>
           </div>
         </div>
 
-        <div className="relative group">
-          <div className="absolute -inset-4 bg-primary-container/10 rounded-[2rem] blur-2xl group-hover:bg-primary-container/20 transition-all" />
-          <div className="relative rounded-[1.5rem] overflow-hidden shadow-2xl glass-card aspect-[4/3] border border-white/40">
-            <img
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              alt="A serene, high-end modern medical office interior with floor-to-ceiling windows overlooking a calm blue ocean at sunset. Two professional mental health specialists engaged in a warm conversation, with soft, warm, cinematic coastal lighting."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFYfkx3CFF15AafczIV2mpuC6c1m4Ds6m70_I3ziQTc-rbHZE-MlCJRPjGIvLlhRLpRR7IPR2_Tww6PKTVOaKJ_C5nsjQrxJOK4xfGsDHzbEJWoZjzUBjAv0QHokcRRxu9KKR1cLR3FqIdxUy9AYgwWsd8bu4kUuItrs_zzrI02sAHwSj9cWAWMyyI_ZJWdiUfwc_3MZPV0HyG__oO0ZrNh2QMgLHS61UUmnCz-UULOQHD8nKa5eRme-MAUQ0-S3dfUX9AREY-408"
+        <div className="relative">
+          <div className="aspect-square rounded-3xl overflow-hidden glass-panel p-4 rotate-3 hover:rotate-0 transition-transform duration-500">
+            <Image
+              className="w-full h-full object-cover rounded-2xl"
+              alt="A serene coastal landscape with soft rolling waves onto a white sand beach under a pastel sunrise. The style is minimalist and high-key, emphasizing tranquility and breathing room. Soft seafoam greens and pale blues dominate the palette, creating an airy wellness-focused aesthetic that feels professional and calm."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK3ckphQdQ0D_taWzaA8HUf1qcqTTVEb4uAdgm_AHn93G0JaX1WmrozHoV3zqrxOvNPAh7g_m73tTMKv0Qpe03htggVGtCPNn8V7yG90iQ7oweB7wGw4wK97UgiKGhC2ZEPNRhnIW7aSj8pHdtXRWdXewuETeL819T5AM6Rhj4hAwHgM8NQbEj4QuKEyUBSCSO-SAdZCX2zCEb24qcdbmVdOLx3_avX9JNw6HPCGqM77DrLZ7PO-d8sQtODPzOu-UJuLy1Pqea0xY"
               width={800}
-              height={600}
-              sizes="(max-width: 768px) 100vw, 50vw"
-            
+              height={800}
+              priority
             />
-            <div className="absolute bottom-6 left-6 right-6 p-6 glass-card rounded-xl border border-white/20 shadow-lg">
-              <p className="text-primary font-headline-md text-headline-md italic">
-                &ldquo;Peace of mind, redefined.&rdquo;
-              </p>
-              <p className="text-on-surface-variant text-label-sm font-label-sm mt-1 uppercase tracking-widest">
-                Our Core Philosophy
-              </p>
-            </div>
           </div>
+          <FloatingFocusCard />
         </div>
       </div>
-    </section>
+    </header>
   );
 }
