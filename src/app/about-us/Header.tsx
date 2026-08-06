@@ -33,37 +33,7 @@ export default function Header() {
           </span>
         </div>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-[24px]">
-          <a
-            className="text-[#404850] hover:text-[#005d90] transition-colors text-[14px] leading-[20px] tracking-[0.01em] font-[Inter] font-medium"
-            href="#"
-          >
-            Mental Wellness
-          </a>
-
-          <a
-            className="text-[#404850] hover:text-[#005d90] transition-colors text-[14px] leading-[20px] tracking-[0.01em] font-[Inter] font-medium"
-            href="#"
-          >
-            Specialists
-          </a>
-
-          <a
-            className="text-[#404850] hover:text-[#005d90] transition-colors text-[14px] leading-[20px] tracking-[0.01em] font-[Inter] font-medium"
-            href="#"
-          >
-            For Clinics
-          </a>
-
-          <a
-            className="text-[#005d90] border-b-2 border-[#005d90] font-bold pb-1 text-[14px] leading-[20px] tracking-[0.01em] font-[Inter] font-medium"
-            href="#"
-          >
-            Our Story
-          </a>
-        </div>
-
+      
         <button className="bg-[#005d90] hover:opacity-90 active:scale-95 text-white px-6 py-2.5 rounded-lg text-[14px] leading-[20px] tracking-[0.01em] font-[Inter] font-bold transition-all shadow-md">
           Get Started
         </button>
