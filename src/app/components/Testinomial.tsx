@@ -1,3 +1,5 @@
+import {Star} from "lucide-react";
+
 type Testimonial = {
   quote: string;
   name: string;
@@ -44,7 +46,7 @@ function Stars({ light = false }: { light?: boolean }) {
           }`}
           style={{ fontVariationSettings: "'FILL' 1" }}
         >
-          star
+          <Star size={20} />
         </span>
       ))}
     </div>
@@ -65,7 +67,7 @@ export default function Testimonials() {
               key={t.name}
               className="rounded-3xl bg-[#0077B6] p-8 text-white shadow-2xl shadow-[#0077B6]/20"
             >
-              <Stars light />
+              <Stars  />
 
               <p className="mb-6 italic leading-8 text-white/90">
                 &ldquo;{t.quote}&rdquo;
