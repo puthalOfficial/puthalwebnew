@@ -9,7 +9,7 @@ export default function Hero() {
         
         <div className="flex w-full flex-col items-center text-center lg:items-start lg:text-left">
 
-          {/* Badge */}
+          
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#9cecfb]/60 bg-[#9cecfb]/30 px-4 py-2">
             <span className="h-2 w-2 animate-pulse rounded-full bg-[#006875]" />
 
