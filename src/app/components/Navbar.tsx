@@ -100,7 +100,7 @@ export default function Navbar() {
         {/* Menu Content */}
         <nav className="flex h-[calc(100vh-5rem)] flex-col px-6 pb-8 pt-6 sm:px-10">
 
-          {/* Navigation Links */}
+          
           <div className="flex flex-col">
             {navLinks.map((link, index) => {
               const active = pathname === link.href;
