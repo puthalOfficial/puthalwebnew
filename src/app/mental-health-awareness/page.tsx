@@ -69,7 +69,7 @@ const conditions = [
         description: "A state of emotional, physical, and mental exhaustion caused by excessive and prolonged stress.",
         symptoms: ["Chronic fatigue", "Cynicism", "Reduced performance", "Lack of motivation"],
         color: "from-rose-500/10 to-orange-500/10",
-        borderColor: "border-rose-200/50"
+        borderColor: "border-rose-200/50",
     }
 ];
 
