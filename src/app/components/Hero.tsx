@@ -29,7 +29,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Description */}
+         
           <p className="mt-6 max-w-lg text-base leading-7 text-[#404850] sm:text-lg sm:leading-8">
             Your comprehensive sanctuary for mental wellness. Navigate your
             emotional journey with professional tools and guided support.
