@@ -1,6 +1,6 @@
 export default function CTA() {
   return (
-    <section className="mx-auto max-w-[1200px] px-4 py-24 text-center md:px-12">
+    <section className="mx-auto max-w-[1200px] pl-2 py-24 text-center md:px-12">
       <div className="relative overflow-hidden rounded-[40px] bg-[#023E8A] p-12 md:p-24">
         {/* Background Texture */}
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-10" />
