@@ -18,7 +18,7 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Heading */}
+          
           <h1 className="flex w-full flex-col items-center text-4xl font-bold leading-[1.08] tracking-tight text-[#023E8A] sm:text-5xl md:text-6xl lg:items-start lg:text-7xl">
             <span className="block whitespace-nowrap">
               Mann ki Uthal
