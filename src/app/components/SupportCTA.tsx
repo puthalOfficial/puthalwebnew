@@ -1,33 +1,29 @@
-export default function SupportCTA() {
+export default function CTA() {
   return (
-    <section className="px-4 py-24 md:px-12">
-      <div className="mx-auto max-w-4xl rounded-[2rem] border-2 border-dashed border-[#005d90]/30 bg-white/30 p-12 text-center shadow-2xl backdrop-blur-xl">
-        <h2 className="mb-6 font-[Manrope] text-[32px] font-semibold leading-[40px] text-[#023E8A]">
-          Need Immediate Guidance?
-        </h2>
+    <section className="mx-auto max-w-[1200px] px-4 py-24 text-center md:px-12">
+      <div className="relative overflow-hidden rounded-[40px] bg-[#023E8A] p-12 md:p-24">
+        {/* Background Texture */}
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-10" />
 
-        <p className="mb-10 font-[Inter] text-[18px] font-normal leading-[28px] text-[#404850]">
-          Our network of 50+ mental health specialists is here to support you
-          when things feel overwhelming. Professional care is just a click
-          away.
-        </p>
+        <div className="relative z-10 mx-auto max-w-3xl">
+          <h2 className="mb-8 text-5xl font-bold leading-tight text-white md:text-6xl">
+            Ready to find your calm?
+          </h2>
 
-        <div className="flex flex-col justify-center gap-4 sm:flex-row">
-          <a
-            href="#"
-            className="flex items-center justify-center gap-2 rounded-xl bg-[#005d90] px-10 py-4 font-bold text-white transition hover:opacity-90"
-          >
-            <span className="material-symbols-outlined">call</span>
-            Talk to an Expert
-          </a>
+          <p className="mb-12 text-lg leading-8 text-white/80">
+            Join thousands of others who have redefined their peace of mind
+            with Puthal&apos;s coastal wellness tools.
+          </p>
 
-          <a
-            href="#"
-            className="flex items-center justify-center gap-2 rounded-xl bg-[#9cecfb] px-10 py-4 font-bold text-[#016d7a] transition hover:opacity-90"
-          >
-            <span className="material-symbols-outlined">mail</span>
-            Contact Support
-          </a>
+          <div className="flex flex-col justify-center gap-6 sm:flex-row">
+            <button className="rounded-xl bg-white px-10 py-5 text-lg font-semibold text-[#023E8A] transition hover:bg-lime-300">
+              Get Started Now
+            </button>
+
+            <button className="rounded-xl border border-white/20 bg-white/10 px-10 py-5 text-lg font-semibold text-white backdrop-blur-md transition hover:bg-white/20">
+              Download App
+            </button>
+          </div>
         </div>
       </div>
     </section>

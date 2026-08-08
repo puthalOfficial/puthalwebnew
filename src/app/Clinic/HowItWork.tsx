@@ -12,31 +12,31 @@ const steps = [
     title: "Patient Books",
     icon: CalendarDays,
     desc: "Patients book appointments online anytime with instant confirmation.",
-    color: "from-cyan-500 to-blue-500",
+    color: "bg-[#0077b6]",
   },
   {
     title: "Clinic Confirms",
     icon: ClipboardCheck,
     desc: "The clinic verifies the appointment and schedules the visit.",
-    color: "from-green-500 to-emerald-500",
+    color: "bg-[#0077b6]",
   },
   {
     title: "Doctor Consultation",
     icon: Stethoscope,
     desc: "Doctors access patient history and provide efficient treatment.",
-    color: "from-orange-500 to-amber-500",
+    color: "bg-[#0077b6]",
   },
   {
     title: "Digital Records",
     icon: FileText,
     desc: "Medical records are stored securely and remain easily accessible.",
-    color: "from-purple-500 to-indigo-500",
+    color: "bg-[#0077b6]",
   },
   {
     title: "Reports & Analytics",
     icon: BarChart3,
     desc: "Generate insights on appointments, revenue, and clinic performance.",
-    color: "from-pink-500 to-rose-500",
+    color: "bg-[#0077b6]",
   },
 ];
 
@@ -94,9 +94,7 @@ export default function HowItWorks() {
                   </div>
 
                   {/* Step Number */}
-                  <div className="absolute -top-3 left-1/2 flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full bg-slate-900 text-sm font-bold text-white">
-                    {index + 1}
-                  </div>
+                  
 
                   {/* Content */}
                   <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-lg transition duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl">

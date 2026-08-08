@@ -10,7 +10,7 @@ const logos = [
 
 export default function TrustedSection() {
   return (
-    <section className="relative overflow-hidden py-24 bg-white">
+    <section className="relative overflow-hidden py-4 bg-white">
 
       {/* Blur Background */}
 

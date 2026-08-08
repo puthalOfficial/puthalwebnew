@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
 
+
 const conditions = [
     {
         id: "depression",
@@ -165,6 +166,7 @@ export default function MentalHealthAwareness() {
                         </motion.div>
                     ))}
                 </div>
+
 
                 {/* CTA Section */}
                 <motion.div

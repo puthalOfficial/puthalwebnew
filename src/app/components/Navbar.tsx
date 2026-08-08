@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Mental Wellness", href: "/patient-services" },
-  { name: "Specialists", href: "/specialists" },
   { name: "For Clinics", href: "/Clinic" },
   { name: "Our Story", href: "/about-us" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -22,7 +22,7 @@ export default function Navbar() {
           href="/"
           className="text-[32px] font-bold tracking-tight text-[#005d90]"
         >
-          Puthal
+          <img src="/image.png" alt="Puthal Logo" className="h-13 w-auto" />
         </Link>
 
         {/* Navigation */}

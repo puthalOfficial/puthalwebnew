@@ -1,6 +1,9 @@
-
+"use client"
+import ClinicModal from "./FormSubmit";
+import { useState } from "react";
 
 export default function ClinicHero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="relative w-full overflow-hidden bg-[#F8FBFF] py-20 md:py-28">
   <div className="mx-auto max-w-6xl px-6 text-center">
@@ -24,29 +27,17 @@ export default function ClinicHero() {
     </p>
 
     <div className="mt-10 flex flex-wrap justify-center gap-4">
-      <button className="rounded-xl bg-cyan-600 px-8 py-4 font-semibold text-white shadow-lg hover:bg-cyan-700 transition">
+      <button onClick={() => setIsModalOpen(true)} className="rounded-xl bg-cyan-600 px-8 py-4 font-semibold text-white shadow-lg hover:bg-cyan-700 transition">
         Book Demo
       </button>
+      <ClinicModal open={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       <button className="rounded-xl border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-700 hover:bg-slate-100 transition">
         Learn More
       </button>
     </div>
 
-    <div className="mt-10 flex flex-col items-center gap-2">
-      <div className="text-2xl text-yellow-400">
-        ⭐⭐⭐⭐⭐
-      </div>
-
-      <p className="font-bold text-slate-900">
-        Trusted by 500+ Clinics
-      </p>
-
-      <p className="text-sm text-slate-500">
-        Helping healthcare professionals grow every day.
-      </p>
-    </div>
-
+   
   </div>
 </section>
   );

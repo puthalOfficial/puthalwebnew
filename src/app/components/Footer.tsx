@@ -39,7 +39,7 @@ export default function Footer() {
           <ul className="space-y-3 text-[12px] leading-[16px]">
             <li>
               <a
-                href="#"
+                href="/about-us"
                 className="text-[#404850] transition-colors hover:text-[#005d90]"
               >
                 About Us
@@ -48,7 +48,7 @@ export default function Footer() {
 
             <li>
               <a
-                href="#"
+                href="/patient-services"
                 className="text-[#404850] transition-colors hover:text-[#005d90]"
               >
                 Our Services
@@ -82,18 +82,10 @@ export default function Footer() {
           </h5>
 
           <ul className="space-y-3 text-[12px] leading-[16px]">
+            
             <li>
               <a
-                href="#"
-                className="text-[#404850] transition-colors hover:text-[#005d90]"
-              >
-                Help Center
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#"
+                href="/Terms"
                 className="text-[#404850] transition-colors hover:text-[#005d90]"
               >
                 Terms of Service
@@ -108,16 +100,16 @@ export default function Footer() {
                 Privacy Policy
               </a>
             </li>
-
             <li>
               <a
-                href="#"
+                href="/feedBack"
                 className="text-[#404850] transition-colors hover:text-[#005d90]"
               >
-                FAQ
+                Feedback
               </a>
             </li>
           </ul>
+
         </div>
 
         {/* Connect */}
