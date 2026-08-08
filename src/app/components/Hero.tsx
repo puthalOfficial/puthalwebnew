@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="w-full overflow-hidden">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-12 sm:px-6 sm:py-16 md:px-10 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-24">
 
-        {/* Left Content */}
+        
         <div className="flex w-full flex-col items-center text-center lg:items-start lg:text-left">
 
           {/* Badge */}
