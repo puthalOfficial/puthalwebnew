@@ -25,7 +25,7 @@ export default function FloatingFocusCard() {
   return (
     <div
       ref={cardRef}
-      className="absolute -bottom-6 -left-6 max-w-xs rounded-2xl border border-white/30 bg-white/70 p-6 shadow-xl backdrop-blur-xl animate-bounce"
+      className="absolute -bottom-6 -left-6 max-w-xs rounded-2xl border border-white/30 bg-white/70 p-6 shadow-xl backdrop-blur-xl "
       style={{ animationDuration: "3s" }}
     >
       <div className="flex items-center gap-4">
