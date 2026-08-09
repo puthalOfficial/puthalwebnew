@@ -12,24 +12,24 @@ type Testimonial = {
 const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "Puthal has become my daily sanctuary. The ocean-inspired meditations help me disconnect from city noise and find my center.",
-    name: "Sarah Jenkins",
-    role: "Marketing Executive",
+      "Puthal has become a small but important part of my daily routine. The calming sessions help me slow down, clear my thoughts, and feel more relaxed after a busy day.",
+    name: "Ananya Sharma",
+    role: "Marketing Professional",
     variant: "light",
     avatarClass: "bg-cyan-200",
   },
   {
     quote:
-      "As a therapist, I recommend the Puthal breathing tools to all my clients. The visual interface is remarkably calming.",
-    name: "Dr. Aris Mehta",
-    role: "Clinical Psychologist",
+      "I really appreciate how simple and calming the experience feels. The breathing and mindfulness tools make it easy to take a few minutes for yourself, even on the busiest days.",
+    name: "Dr. Rohan Mehta",
+    role: "Wellness Consultant",
     variant: "dark",
     avatarClass: "bg-white/20",
   },
   {
     quote:
-      "The Nature Tunes are incredibly high-quality. It feels like I'm actually on a retreat whenever I put my headphones on.",
-    name: "Liam Cross",
+      "The nature sounds and guided experiences have made a noticeable difference in my evening routine. They help me disconnect from work, relax my mind, and get ready for a better night's sleep.",
+    name: "Arjun Kapoor",
     role: "Software Engineer",
     variant: "light",
     avatarClass: "bg-slate-300",
@@ -56,7 +56,7 @@ function Stars({ light = false }: { light?: boolean }) {
 
 export default function Testimonials() {
   return (
-    <section className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <section className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-10">
       
       {/* Heading */}
       <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
@@ -83,8 +83,8 @@ export default function Testimonials() {
               <Stars light />
 
               {/* Quote */}
-              <p className="mb-6 flex-1 text-[15px] italic leading-7 text-white/90 sm:text-base sm:leading-8">
-                &ldquo;{t.quote}&rdquo;
+              <p className="mb-6 flex-1 text-[15px]  leading-7 text-white/90 sm:text-base sm:leading-8">
+                {t.quote}
               </p>
 
               {/* User */}
@@ -116,8 +116,8 @@ export default function Testimonials() {
               <Stars />
 
               {/* Quote */}
-              <p className="mb-6 flex-1 text-[15px] italic leading-7 text-gray-700 sm:text-base sm:leading-8">
-                &ldquo;{t.quote}&rdquo;
+              <p className="mb-6 flex-1 text-[15px]  leading-7 text-gray-700 sm:text-base sm:leading-8">
+                {t.quote}
               </p>
 
               {/* User */}

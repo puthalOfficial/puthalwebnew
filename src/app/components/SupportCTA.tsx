@@ -7,12 +7,11 @@ export default function CTA() {
 
         <div className="relative z-10 mx-auto max-w-3xl">
           <h2 className="mb-8 text-5xl font-bold leading-tight text-white md:text-6xl">
-            Ready to find your calm?
+            Ready to find your calm
           </h2>
 
           <p className="mb-12 text-lg leading-8 text-white/80">
-            Join thousands of others who have redefined their peace of mind
-            with Puthal&apos;s coastal wellness tools.
+            Take a moment for yourself and discover simple ways to calm your mind, reduce stress, and build a healthier daily routine. Start your wellness journey with Puthal and make space for more peace, balance, and clarity in your life
           </p>
 
           <div className="flex flex-col justify-center gap-6 sm:flex-row">

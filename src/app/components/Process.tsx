@@ -40,7 +40,7 @@ export default function Process() {
               key={step.number}
               className="group relative rounded-3xl bg-gray-50 p-8 "
             >
-              <div className="absolute -top-10 left-2 select-none text-[100px] font-extrabold text-gray-200">
+              <div className="absolute w-full flex justify-center  left-2 select-none text-[100px] font-extrabold text-gray-200">
                 {step.number}
               </div>
 

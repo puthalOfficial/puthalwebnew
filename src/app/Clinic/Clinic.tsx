@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function ClinicHero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <section className="relative w-full overflow-hidden bg-[#F8FBFF] py-20 md:py-28">
+    <section className="relative w-full overflow-hidden bg-[#F8FBFF] py-20 md:py-18">
   <div className="mx-auto max-w-6xl px-6 text-center">
 
     <div className="inline-flex items-center rounded-full bg-cyan-100 px-4 py-2 text-sm font-semibold text-cyan-700">

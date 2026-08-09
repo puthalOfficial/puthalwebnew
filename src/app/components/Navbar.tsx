@@ -36,7 +36,7 @@ export default function Navbar() {
          
 
           <span className="text-lg font-bold text-[#023E8A] sm:text-xl">
-            <img src="/image.png" alt="Puthal Logo" className="h-8 w-auto sm:h-10" />
+            <img src="/puthallogo.png" alt="Puthal Logo" className="h-8 w-auto sm:h-10" />
           </span>
         </Link>
 

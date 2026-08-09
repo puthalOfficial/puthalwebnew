@@ -17,7 +17,7 @@ export default function Services() {
       {/* Services Grid */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
         {/* Breathing */}
-        <div className="group relative min-h-[420px] overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 transition-all hover:shadow-2xl sm:min-h-[500px] md:col-span-2 lg:col-span-8">
+        <div className="group relative min-h-[320px] overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 transition-all hover:shadow-2xl sm:min-h-[400px] md:col-span-2 lg:col-span-8">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCstGK369RHXRL-zYR0-6o3LxRODZW2WCKulbIvgjMUdamEkDJzGOGXE_duR6AV8NLqGrag3w5sx3-h70mUJ2KGL9RQbcBPU-pYwfpRPmqP1Oqf2ltffvaQVxenfTj4TyW15mtUTGSzeS-CC4YFtBelak8TbiL0iMxkyUN47_PnfmlKoV1Uf6fyAVVRcB6uUszc4NvMJug16nyzXyXrRUVD_obPatdROwOW47agWZeWndTDZiEdVhBzfGMQws1hpj8quMaPkwjGg9I"
             alt="Breathing Exercise"
@@ -27,11 +27,6 @@ export default function Services() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
 
           <div className="absolute bottom-0 left-0 w-full p-5 sm:p-8">
-            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#005d90]/50 backdrop-blur sm:h-12 sm:w-12">
-              <span className="material-symbols-outlined text-white">
-                air
-              </span>
-            </div>
 
             <h3 className="mb-2 text-xl font-semibold text-white sm:text-2xl">
               Breathing Exercises
@@ -46,10 +41,10 @@ export default function Services() {
 
         {/* Meditation */}
         <div className="flex min-h-[300px] flex-col justify-between rounded-3xl border border-gray-200 bg-white/70 p-6 shadow-lg backdrop-blur-md transition-all hover:border-[#005d90]/30 sm:p-8 md:col-span-1 lg:col-span-4">
-          <div>
+          <div className="flex flex-col gap-2">
             <div className="mb-5 flex h-12 w-full items-center justify-center rounded-xl bg-[#9cecfb]/20">
               <span className="material-symbols-outlined text-[#006875]">
-                self improvement
+                Self Improvement
               </span>
             </div>
 
@@ -58,27 +53,18 @@ export default function Services() {
             </h3>
 
             <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-              Professional sessions designed to reset your neurological
-              pathways and foster long-term recovery.
+              Life can sometimes feel overwhelming, leaving us stressed, tired, or disconnected from ourselves. Our guided sessions offer a peaceful space to slow down, clear your mind, and take care of your emotional well-being. Learn simple ways to manage stress, improve focus, and build healthier habits for a calmer, happier, and more balanced life
             </p>
           </div>
 
-          <div className="mt-8 border-t border-gray-200 pt-6">
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="text-xs font-semibold tracking-wider text-[#006875]">
-                NEW SESSION AVAILABLE
-              </span>
-
-              <span className="h-2 w-2 rounded-full bg-[#006875]" />
-            </div>
-          </div>
+          
         </div>
 
         {/* Nature Tunes */}
         <div className="group min-h-[280px] rounded-3xl bg-gray-100 p-6 transition-all hover:bg-[#9cecfb] sm:p-8 md:col-span-1 lg:col-span-4">
           <div className="mb-5 flex h-12 w-full items-center justify-center rounded-xl bg-white shadow">
             <span className="material-symbols-outlined text-[#005d90] group-hover:animate-pulse">
-              music note
+              Music Note
             </span>
           </div>
 
@@ -87,18 +73,17 @@ export default function Services() {
           </h3>
 
           <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-            Spatial audio recordings of coastal environments to enhance deep
-            focus and natural sleep cycles.
+            Calming wellness experiences created to help you slow down, clear your mind, and reconnect with yourself. Discover simple practices that support better focus, reduce everyday stress, and encourage deep relaxation and more restful sleep.
           </p>
         </div>
 
         {/* Journaling */}
         <div className="relative min-h-[320px] overflow-hidden rounded-3xl bg-gray-200 p-6 sm:p-8 md:col-span-2 lg:col-span-8">
           <div className="relative z-10 grid h-full gap-8 md:grid-cols-2">
-            <div className="flex flex-col justify-center gap-4 mb-30">
+            <div className="flex flex-col justify-center gap-4 ">
               <div className=" flex h-12 w-full items-center justify-center rounded-xl bg-white shadow">
                 <span className="material-symbols-outlined text-gray-600">
-                  edit note
+                  Edit Note
                 </span>
               </div>
               <div className="mb-3 text-xl font-semibold text-[#023E8A] sm:text-2xl">
@@ -108,8 +93,7 @@ export default function Services() {
               </h3>
 
               <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-                AI-assisted journaling that maps your emotional tides and
-                provides personalized insights.
+               A simple and thoughtful journaling experience that helps you put your feelings into words, understand your emotional patterns, and reflect on what matters most. With AI-powered insights, discover helpful patterns in your thoughts and build greater self-awareness over time
               </p>
               </div>
             </div>
