@@ -1,4 +1,5 @@
-import {Star} from "lucide-react";
+
+import { Star } from "lucide-react";
 
 type Testimonial = {
   quote: string;
@@ -37,17 +38,17 @@ const TESTIMONIALS: Testimonial[] = [
 
 function Stars({ light = false }: { light?: boolean }) {
   return (
-    <div className="mb-4 flex gap-1">
+    <div className="mb-5 flex gap-1">
       {Array.from({ length: 5 }).map((_, i) => (
-        <span
+        <Star
           key={i}
-          className={`material-symbols-outlined ${
-            light ? "text-white" : "text-lime-400"
-          }`}
-          style={{ fontVariationSettings: "'FILL' 1" }}
-        >
-          <Star size={20} />
-        </span>
+          size={17}
+          className={
+            light
+              ? "fill-white text-white"
+              : "fill-lime-400 text-lime-400"
+          }
+        />
       ))}
     </div>
   );
@@ -55,53 +56,84 @@ function Stars({ light = false }: { light?: boolean }) {
 
 export default function Testimonials() {
   return (
-    <section className="mx-auto max-w-8xl px-4 py-4 md:px-12">
-      <h2 className="mb-16 text-center text-4xl font-bold text-[#023E8A]">
-        Coastal Voices
-      </h2>
+    <section className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      
+      {/* Heading */}
+      <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
+        <h2 className="font-[Manrope] text-3xl font-bold tracking-tight text-[#023E8A] sm:text-4xl lg:text-5xl">
+          Coastal Voices
+        </h2>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <p className="mt-3 text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
+          Hear how Puthal is helping people find calm, clarity and balance
+          in their everyday lives.
+        </p>
+      </div>
+
+      {/* Testimonials */}
+      <div className="mx-auto grid max-w-8xl px-5 grid-cols-1 items-stretch gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {TESTIMONIALS.map((t) =>
           t.variant === "dark" ? (
+            /* Dark Card */
             <div
               key={t.name}
-              className="rounded-3xl bg-[#0077B6] p-8 text-white shadow-2xl shadow-[#0077B6]/20"
+              className="flex h-full min-h-[300px] flex-col rounded-3xl bg-[#0077B6] p-5 text-white shadow-2xl shadow-[#0077B6]/20 transition-transform duration-300 hover:-translate-y-1 sm:min-h-[320px] sm:p-7 lg:p-8"
             >
-              <Stars  />
+              {/* Stars */}
+              <Stars light />
 
-              <p className="mb-6 italic leading-8 text-white/90">
+              {/* Quote */}
+              <p className="mb-6 flex-1 text-[15px] italic leading-7 text-white/90 sm:text-base sm:leading-8">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
-              <div className="flex items-center gap-4">
-                <div className={`h-12 w-12 rounded-full ${t.avatarClass}`} />
+              {/* User */}
+              <div className="flex min-h-[56px] items-center gap-3 sm:gap-4">
+                {/* Avatar */}
+                <div
+                  className={`h-10 w-10 shrink-0 rounded-full sm:h-12 sm:w-12 ${t.avatarClass}`}
+                />
 
-                <div className="py-7">
-                  <p className="font-semibold">{t.name}</p>
-                  <p className="text-sm text-white/70">{t.role}</p>
+                {/* Name / Role */}
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-sm font-semibold sm:text-base">
+                    {t.name}
+                  </p>
+
+                  <p className="truncate text-xs text-white/70 sm:text-sm">
+                    {t.role}
+                  </p>
                 </div>
               </div>
             </div>
           ) : (
+            /* Light Card */
             <div
               key={t.name}
-              className="rounded-3xl border border-gray-200 bg-white/80 p-8 shadow-lg backdrop-blur-md transition hover:-translate-y-2 hover:shadow-xl"
+              className="flex h-full min-h-[300px] flex-col rounded-3xl bg-white p-5 shadow-lg ring-1 ring-gray-100 transition-transform duration-300 hover:-translate-y-1 sm:min-h-[320px] sm:p-7 lg:p-8"
             >
+              {/* Stars */}
               <Stars />
 
-              <p className="mb-6 italic leading-8 text-gray-700">
+              {/* Quote */}
+              <p className="mb-6 flex-1 text-[15px] italic leading-7 text-gray-700 sm:text-base sm:leading-8">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
-              <div className="flex items-center gap-4">
-                <div className={`h-12 w-12 rounded-full ${t.avatarClass}`} />
+              {/* User */}
+              <div className="flex min-h-[56px] items-center gap-3 sm:gap-4">
+                {/* Avatar */}
+                <div
+                  className={`h-10 w-10 shrink-0 rounded-full sm:h-12 sm:w-12 ${t.avatarClass}`}
+                />
 
-                <div>
-                  <p className="font-semibold text-gray-900">
+                {/* Name / Role */}
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-sm font-semibold text-gray-900 sm:text-base">
                     {t.name}
                   </p>
 
-                  <p className="text-sm text-gray-500">
+                  <p className="truncate text-xs text-gray-500 sm:text-sm">
                     {t.role}
                   </p>
                 </div>
