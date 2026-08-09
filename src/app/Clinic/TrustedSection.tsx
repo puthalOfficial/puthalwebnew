@@ -5,7 +5,6 @@ const logos = [
   "/logos/logo2.svg",
   "/logos/logo3.svg",
   "/logos/logo4.svg",
-  "/logos/logo5.svg",
 ];
 
 export default function TrustedSection() {
@@ -43,7 +42,7 @@ export default function TrustedSection() {
 
         {/* Logo Cards */}
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="mt-16 flex justify-around">
 
           {logos.map((logo, index) => (
             <div
@@ -52,8 +51,8 @@ export default function TrustedSection() {
             >
               <Image
                 src={logo}
-                width={140}
-                height={50}
+                width={180}
+                height={100}
                 alt="Clinic Logo"
                 className="opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition"
               />

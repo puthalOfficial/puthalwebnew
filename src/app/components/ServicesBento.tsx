@@ -21,7 +21,7 @@ export default function Services() {
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCstGK369RHXRL-zYR0-6o3LxRODZW2WCKulbIvgjMUdamEkDJzGOGXE_duR6AV8NLqGrag3w5sx3-h70mUJ2KGL9RQbcBPU-pYwfpRPmqP1Oqf2ltffvaQVxenfTj4TyW15mtUTGSzeS-CC4YFtBelak8TbiL0iMxkyUN47_PnfmlKoV1Uf6fyAVVRcB6uUszc4NvMJug16nyzXyXrRUVD_obPatdROwOW47agWZeWndTDZiEdVhBzfGMQws1hpj8quMaPkwjGg9I"
             alt="Breathing Exercise"
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 "
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
@@ -95,12 +95,13 @@ export default function Services() {
         {/* Journaling */}
         <div className="relative min-h-[320px] overflow-hidden rounded-3xl bg-gray-200 p-6 sm:p-8 md:col-span-2 lg:col-span-8">
           <div className="relative z-10 grid h-full gap-8 md:grid-cols-2">
-            <div className="flex flex-col justify-center">
-              <div className="mb-5 flex h-12 w-full items-center justify-center rounded-xl bg-white shadow">
+            <div className="flex flex-col justify-center gap-4 mb-30">
+              <div className=" flex h-12 w-full items-center justify-center rounded-xl bg-white shadow">
                 <span className="material-symbols-outlined text-gray-600">
                   edit note
                 </span>
               </div>
+              <div className="mb-3 text-xl font-semibold text-[#023E8A] sm:text-2xl">
 
               <h3 className="mb-3 text-xl font-semibold text-[#023E8A] sm:text-2xl">
                 Reflective Journaling
@@ -110,6 +111,7 @@ export default function Services() {
                 AI-assisted journaling that maps your emotional tides and
                 provides personalized insights.
               </p>
+              </div>
             </div>
 
             {/* Image */}

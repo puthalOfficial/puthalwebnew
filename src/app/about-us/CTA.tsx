@@ -4,14 +4,7 @@ export default function CTA() {
       <div className="max-w-300 mx-auto rounded-[3rem] overflow-hidden relative shadow-2xl">
         <div className="absolute inset-0 bg-gradient-to-br from-[#005d90] via-[#005d90] to-[#006875]" />
 
-        <div className="absolute top-0 right-0 p-12 opacity-10">
-          <span
-            className="material-symbols-outlined text-[200px]"
-            style={{ fontVariationSettings: "'FILL' 1" }}
-          >
-            water_drop
-          </span>
-        </div>
+        
 
         <div className="relative z-10 p-12 md:p-24 flex flex-col items-center text-center">
           <h2 className="text-[48px] leading-[56px] tracking-[-0.02em] font-bold font-[Manrope] text-white mb-6">

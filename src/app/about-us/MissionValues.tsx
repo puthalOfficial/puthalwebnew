@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function MissionValues() {
   return (
-    <section className="py-24 bg-white">
-      <div className="px-[16px] md:px-[48px] max-w-[1200px] mx-auto">
+    <section className="py-14 bg-white">
+      <div className="px-[16px] md:px-20 max-w-8xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-[32px] leading-[40px] font-[Manrope] font-semibold text-[#191c1e] mb-4">
             Rooted in Wellness, Driven by Innovation

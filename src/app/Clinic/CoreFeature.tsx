@@ -66,7 +66,7 @@ const features = [
 
 export default function CoreFeatures() {
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-28">
+    <section className="relative overflow-hidden bg-slate-50 py-8">
 
       <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-cyan-300/20 blur-[120px]" />
       <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-blue-300/20 blur-[120px]" />

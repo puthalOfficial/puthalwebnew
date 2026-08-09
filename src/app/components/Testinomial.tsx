@@ -55,7 +55,7 @@ function Stars({ light = false }: { light?: boolean }) {
 
 export default function Testimonials() {
   return (
-    <section className="mx-auto max-w-8xl px-4 py-24 md:px-12">
+    <section className="mx-auto max-w-8xl px-4 py-4 md:px-12">
       <h2 className="mb-16 text-center text-4xl font-bold text-[#023E8A]">
         Coastal Voices
       </h2>
@@ -76,7 +76,7 @@ export default function Testimonials() {
               <div className="flex items-center gap-4">
                 <div className={`h-12 w-12 rounded-full ${t.avatarClass}`} />
 
-                <div>
+                <div className="py-7">
                   <p className="font-semibold">{t.name}</p>
                   <p className="text-sm text-white/70">{t.role}</p>
                 </div>

@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="border-t border-[#bfc7d1]/20 bg-[#eceef0] py-12">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-6 px-4 md:grid-cols-4 md:px-12">
+      <div className="mx-auto grid max-w-[1500px] grid-cols-1 gap-6 px-4 md:grid-cols-4 md:px-12">
         {/* Brand */}
         <div className="space-y-4">
           <h2 className="font-[Manrope] text-[24px] font-bold leading-[32px] text-[#023E8A]">
@@ -13,21 +13,7 @@ export default function Footer() {
             innovative technology and human-centric design.
           </p>
 
-          <div className="flex gap-4">
-            <a
-              href="#"
-              className="text-[#005d90] transition-transform hover:scale-110"
-            >
-              <span className="material-symbols-outlined">public</span>
-            </a>
-
-            <a
-              href="#"
-              className="text-[#005d90] transition-transform hover:scale-110"
-            >
-              <span className="material-symbols-outlined">share</span>
-            </a>
-          </div>
+          
         </div>
 
         {/* Company */}

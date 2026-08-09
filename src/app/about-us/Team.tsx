@@ -29,7 +29,7 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section className="py-24 px-[16px] md:px-[48px] max-w-[1200px] mx-auto">
+    <section className="py-24 px-[16px] md:px-[48px] max-w-[1500px] mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
         <div className="max-w-2xl">
           <span className="text-[#005d90] font-bold text-[12px] leading-[16px] tracking-[0.05em] font-[Inter] uppercase tracking-widest mb-4 block">
