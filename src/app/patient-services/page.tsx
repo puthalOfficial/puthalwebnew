@@ -166,7 +166,7 @@ export default function PatientServices() {
 </section>
 
       {/* Professional Support CTA */}
-     <section className="px-4 py-24 md:px-12">
+     <section id="page" className="px-4 py-24 md:px-12">
   <div className="mx-auto max-w-4xl rounded-[2rem] border-2 border-dashed border-[#005d90]/30 bg-white/30 p-12 text-center shadow-2xl backdrop-blur-xl">
     <h2 className="mb-6 font-[Manrope] text-[32px] font-semibold leading-[40px] text-[#023E8A]">
       Need Immediate Guidance?

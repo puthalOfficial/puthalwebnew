@@ -1,4 +1,6 @@
+"use client"
 import React from 'react'
+
 import {BookOpenIcon, CloudIcon , Music2Icon , ChartBar} from 'lucide-react'
 
 export default function Activities() {
@@ -32,9 +34,15 @@ export default function Activities() {
     cta: "Start Chat",
   },
 ];
+  const handleScroll = () => {
+    document.getElementById("page")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
 
   return (
-     <section className="py-20">
+     <section  className="py-20">
         <div className="mx-auto max-w-8xl px-10 lg:px-10">
           <div className="mb-12 text-center">
             <h2 className="text-4xl font-extrabold text-sky-950">
@@ -59,7 +67,7 @@ export default function Activities() {
                 <p className="mt-3 text-slate-600">
                   {activity.description}
                 </p>
-                <button className="mt-6 rounded-xl bg-sky-700 px-6 py-3 font-semibold text-white transition hover:bg-sky-800">
+                <button onClick={handleScroll} className="mt-6 rounded-xl bg-sky-700 px-6 py-3 font-semibold text-white transition hover:bg-sky-800">
                   {activity.cta}
                 </button>
               </div>

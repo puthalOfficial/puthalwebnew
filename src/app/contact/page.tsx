@@ -67,7 +67,7 @@ export default function ContactPage() {
   return (
     <>
     <Navbar/>
-    <main className="min-h-screen bg-[#fcf9ff] px-5 py-25 md:px-10 lg:px-20">
+    <main className="min-h-screen bg-[#fcf9ff] px-5 py-5 md:px-10 lg:px-20">
       
       {/* Header */}
       <section className="mx-auto mb-2 max-w-6xl text-center">

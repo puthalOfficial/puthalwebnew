@@ -1,4 +1,4 @@
-import React from 'react'
+"use client"
 import {BrainIcon, Gamepad2Icon} from 'lucide-react'
 
 
@@ -21,6 +21,11 @@ const gameCards = [
   },
 ];
 
+ const handleScroll = () => {
+    document.getElementById("page")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 export default function Stress() {
   return (
     <div>
@@ -53,7 +58,7 @@ export default function Stress() {
                   <span>{game.reward}</span>
                 </div>
 
-                <button className="mt-6 rounded-xl bg-sky-700 px-6 py-3 font-semibold text-white transition hover:bg-sky-800">
+                <button onClick={handleScroll} className="mt-6 rounded-xl bg-sky-700 px-6 py-3 font-semibold text-white transition hover:bg-sky-800">
                   Play Now
                 </button>
               </div>

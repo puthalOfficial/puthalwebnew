@@ -1,7 +1,12 @@
-import React from 'react'
+"use client"
 import {Notebook, UserCheckIcon, UserIcon} from 'lucide-react'
 
 export default function DoctorMatching() {
+   const handleScroll = () => {
+    document.getElementById("page")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <section className="bg-slate-100 py-20">
         <div className="mx-auto max-w-8xl px-6 lg:px-10">
@@ -66,7 +71,7 @@ export default function DoctorMatching() {
               patterns, we recommend a stress & anxiety specialist.
             </p>
 
-            <button className="mt-6 rounded-xl bg-sky-700 px-8 py-3 font-semibold text-white transition hover:bg-sky-800">
+            <button onClick={handleScroll} className="mt-6 rounded-xl bg-sky-700 px-8 py-3 font-semibold text-white transition hover:bg-sky-800">
               Find My Doctor
             </button>
           </div>

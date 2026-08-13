@@ -29,7 +29,7 @@ export default function TrustedSection() {
 
           <h2 className="mt-6 text-5xl font-bold text-slate-900">
             Trusted by Modern
-            <span className="text-cyan-600"> Healthcare Clinics</span>
+            <span className="text-[#005d90]"> Healthcare Clinics</span>
           </h2>
 
           <p className="mt-5 max-w-2xl mx-auto text-lg text-slate-500">
@@ -67,7 +67,7 @@ export default function TrustedSection() {
 
           <div className="rounded-3xl bg-slate-50 p-8 text-center">
 
-            <h3 className="text-4xl font-bold text-cyan-600">
+            <h3 className="text-4xl font-bold text-[#005d90]">
               500+
             </h3>
 
@@ -79,7 +79,7 @@ export default function TrustedSection() {
 
           <div className="rounded-3xl bg-slate-50 p-8 text-center">
 
-            <h3 className="text-4xl font-bold text-cyan-600">
+            <h3 className="text-4xl font-bold text-[#005d90]">
               1M+
             </h3>
 
@@ -91,11 +91,11 @@ export default function TrustedSection() {
 
           <div className="rounded-3xl bg-slate-50 p-8 text-center">
 
-            <h3 className="text-4xl font-bold text-cyan-600">
+            <h3 className="text-4xl font-bold text-[#005d90]">
               5M+
             </h3>
 
-            <p className="mt-2 text-slate-500">
+            <p className="mt-2 text-[#005d90]">
               Appointments
             </p>
 
@@ -103,7 +103,7 @@ export default function TrustedSection() {
 
           <div className="rounded-3xl bg-slate-50 p-8 text-center">
 
-            <h3 className="text-4xl font-bold text-cyan-600">
+            <h3 className="text-4xl font-bold text-[#005d90]">
               4.9★
             </h3>
 

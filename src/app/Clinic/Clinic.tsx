@@ -14,7 +14,7 @@ export default function ClinicHero() {
 
     <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-black leading-tight text-slate-900">
       Smart Clinic  Management
-      <span className="block text-cyan-600">
+      <span className="block text-[#005d90]">
        Solutions
       </span>
       
@@ -27,7 +27,7 @@ export default function ClinicHero() {
     </p>
 
     <div className="mt-10 flex flex-wrap justify-center gap-4">
-      <button onClick={() => setIsModalOpen(true)} className="rounded-xl bg-cyan-600 px-8 py-4 font-semibold text-white shadow-lg hover:bg-cyan-700 transition">
+      <button onClick={() => setIsModalOpen(true)} className="rounded-xl bg-[#005d90] px-8 py-4 font-semibold text-white shadow-lg hover:bg-[#005d90] transition">
         Book Demo
       </button>
       <ClinicModal open={isModalOpen} onClose={() => setIsModalOpen(false)} />
