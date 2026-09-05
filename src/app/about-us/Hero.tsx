@@ -23,35 +23,7 @@ export default function Hero() {
     landscapes with clarity and peace.
   </p>
 
-  <div className="flex flex-wrap gap-4">
-    {/* Badge 1 */}
-    <div className="flex items-center gap-2 rounded-full border border-[#bfc7d1]/30 bg-[#e6e8ea] px-4 py-2">
-      <span
-        className="material-symbols-outlined text-[#005d90]"
-        style={{ fontVariationSettings: "'FILL' 1" }}
-      >
-        verified
-      </span>
-
-      <span className="font-[Inter] text-[14px] font-medium leading-[20px] text-[#191c1e]">
-        12K+ Users Globally
-      </span>
-    </div>
-
-    {/* Badge 2 */}
-    <div className="flex items-center gap-2 rounded-full border border-[#bfc7d1]/30 bg-[#e6e8ea] px-4 py-2">
-      <span
-        className="material-symbols-outlined text-[#006875]"
-        style={{ fontVariationSettings: "'FILL' 1" }}
-      >
-        star
-      </span>
-
-      <span className="font-[Inter] text-[14px] font-medium leading-[20px] text-[#191c1e]">
-        50+ Specialists
-      </span>
-    </div>
-  </div>
+ 
 </div>
 
         <div className="relative group">

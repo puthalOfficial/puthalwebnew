@@ -19,9 +19,6 @@ export default function CTA() {
 
           <div className="flex flex-col sm:flex-row gap-6">
             <button className="bg-white text-[#005d90] px-10 py-4 rounded-xl font-bold text-[14px] leading-[20px] tracking-[0.01em] font-[Inter] flex items-center gap-3 hover:bg-[#f7f9fb] transition-colors shadow-lg active:scale-95">
-              <span className="material-symbols-outlined">
-                download
-              </span>
               Download App
             </button>
 

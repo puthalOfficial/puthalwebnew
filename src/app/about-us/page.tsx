@@ -19,7 +19,6 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
-      <MicroInteractions />
     </>
   );
 }
