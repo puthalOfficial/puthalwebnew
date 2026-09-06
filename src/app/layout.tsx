@@ -141,6 +141,10 @@ export const metadata: Metadata = {
   "mental health emergency support",
 ],
 
+ icons: {
+    icon: "/image copy 3.png",
+  },
+
   authors: [
     {
       name: "Puthal",
