@@ -1,171 +1,172 @@
+
+"use client";
+
+import { motion } from "framer-motion";
+import {TrendingUp , Clock , Heart} from "lucide-react";
 const CLINIC_BENEFITS = [
   {
-    number: "01",
-    title: "Reach More Patients",
+    title: "Reach more patients",
     description:
-      "Expand your clinic's reach and connect with patients beyond traditional appointments.",
-    icon: "↗",
-    accent: "sea",
+      "Help more people discover your clinic and stay connected with them beyond appointments.",
+    icon: <TrendingUp />,
+    color: "text-[#287F7A]",
+    bg: "bg-[#E7F3F1]",
   },
   {
-    number: "02",
-    title: "Save Valuable Time",
+    title: "Save your team's time",
     description:
-      "Reduce repetitive administrative work so your team can spend more time caring for patients.",
-    icon: "◷",
-    accent: "ocean",
+      "Reduce repetitive work and simplify everyday tasks so your team can focus more on patient care.",
+    icon: <Clock />,
+    color: "text-[#32789B]",
+    bg: "bg-[#E9F2F7]",
   },
   {
-    number: "03",
-    title: "Engage Patients Better",
+    title: "Stay connected",
     description:
-      "Keep patients connected between visits with personalized digital wellness experiences.",
-    icon: "♡",
-    accent: "teal",
+      "Support patients between visits and make their experience with your clinic feel more connected.",
+    icon: <Heart />,
+    color: "text-[#287477]",
+    bg: "bg-[#E6F2F1]",
   },
   {
-    number: "04",
-    title: "Grow Your Practice",
+    title: "Grow with confidence",
     description:
-      "Strengthen patient relationships, improve retention, and create sustainable growth.",
-    icon: "↗",
-    accent: "sand",
+      "Build stronger patient relationships and create a better foundation for long-term growth.",
+    icon: <TrendingUp />,
+    color: "text-[#8A795B]",
+    bg: "bg-[#F3EFE7]",
   },
-] as const;
-
-const ACCENTS = {
-  sea: {
-    icon: "bg-[#E2F3F1] text-[#167C78] group-hover:bg-[#167C78]",
-    glow: "bg-[#8DD8D0]/30",
-    line: "bg-[#167C78]",
-  },
-  ocean: {
-    icon: "bg-[#E5F0F8] text-[#24739A] group-hover:bg-[#24739A]",
-    glow: "bg-[#9CCBE3]/30",
-    line: "bg-[#24739A]",
-  },
-  teal: {
-    icon: "bg-[#E0F2F0] text-[#116B72] group-hover:bg-[#116B72]",
-    glow: "bg-[#82CEC8]/30",
-    line: "bg-[#116B72]",
-  },
-  sand: {
-    icon: "bg-[#F4EFE4] text-[#8A7755] group-hover:bg-[#8A7755]",
-    glow: "bg-[#DCCDAE]/30",
-    line: "bg-[#8A7755]",
-  },
-};
+];
 
 export default function ClinicBenefits() {
   return (
-    <section className="relative overflow-hidden bg-[#F3F9FC] py-24 px-margin-mobile md:px-margin-desktop">
-      {/* Coastal blue background */}
-      <div className="pointer-events-none absolute -left-32 top-0 h-80 w-80 rounded-full bg-[#9CCFE3]/30 blur-3xl" />
-      <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-[#B8DDF0]/40 blur-3xl" />
-
-      <div className="relative mx-auto max-w-container-max-width">
+    <section className="bg-[#F6FAFB] px-margin-mobile py-20 md:px-20 md:py-24">
+      <div className="mx-auto max-w-container-max-width">
 
         {/* Header */}
-        <div className="mx-auto mb-16 max-w-3xl text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mx-auto mb-14 max-w-2xl text-center"
+        >
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#4D899B]">
+            For clinics
+          </p>
 
-          {/* Badge */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#A8D1E4] bg-[#E6F3F9] px-4 py-2">
-            <span className="h-2 w-2 rounded-full bg-[#3186A8]" />
-
-            <span className="text-label-sm uppercase tracking-[0.18em] text-[#286B89]">
-              Built for Modern Clinics
-            </span>
-          </div>
-
-          {/* Heading */}
-          <h2 className="font-headline-lg text-headline-lg leading-[1.1] text-[#123B4A]">
+          <h2 className="font-headline-lg text-[32px] font-semibold leading-[1.18] tracking-[-0.025em] text-[#183F4D] md:text-[42px]">
             Better care for patients.
-            <br />
-
-            <span className="text-[#247DA3]">
-              Better growth for your clinic.
+            <span className="block text-[#28789D]">
+              Better support for your clinic.
             </span>
           </h2>
 
-          {/* Description */}
-          <p className="mx-auto mt-6 max-w-2xl text-body-lg leading-7 text-[#607D8A]">
-            Give your team simple digital wellness tools that make patient
-            engagement easier, operations smoother, and growth more sustainable.
+          <p className="mx-auto mt-5 max-w-xl text-[15px] leading-7 text-[#667F87] md:text-base">
+            Puthal brings patient engagement and everyday clinic support
+            together in one simple digital experience.
           </p>
-        </div>
+        </motion.div>
 
 
-        {/* Benefit Cards */}
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {CLINIC_BENEFITS.map((benefit) => {
-            const styles = ACCENTS[benefit.accent];
+        {/* Cards */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.12,
+              },
+            },
+          }}
+          className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
+        >
+         {CLINIC_BENEFITS.map((benefit) => (
+  <motion.div
+    key={benefit.title}
+    variants={{
+      hidden: {
+        opacity: 0,
+        y: 24,
+      },
+      show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.55,
+          ease: "easeOut",
+        },
+      },
+    }}
+    className="
+      flex min-h-[220px] flex-col
+      rounded-2xl
+      border border-[#DDE9EA]
+      bg-white
+      p-6
+    "
+  >
+    {/* Icon */}
+    <div
+      className={`
+        flex h-11 w-11 shrink-0
+        items-center justify-center
+        rounded-xl text-lg
+        ${benefit.bg}
+        ${benefit.color}
+      `}
+    >
+      {benefit.icon}
+    </div>
 
-            return (
-              <div
-                key={benefit.number}
-                className="group relative overflow-hidden rounded-[30px]
-                  border border-[#D8E8E6] bg-white p-7
-                  shadow-[0_8px_30px_rgba(18,59,74,0.05)]
-                  transition-all duration-500
-                  hover:-translate-y-2
-                  hover:border-[#A9D3CF]
-                  hover:shadow-[0_24px_55px_rgba(18,59,74,0.10)]"
-              >
-                {/* Soft coastal glow */}
-                <div
-                  className={`absolute -right-10 -top-10 h-32 w-32 rounded-full
-                    blur-3xl opacity-0 transition-opacity duration-500
-                    group-hover:opacity-100 ${styles.glow}`}
-                />
+    {/* Content */}
+    <div className="mt-8">
+      <h3
+        className="
+          min-h-[22px]
+          font-headline-md
+          text-[20px]
+          font-semibold
+          leading-[1.3]
+          tracking-[-0.01em]
+          text-[#183F4D]
+        "
+      >
+        {benefit.title}
+      </h3>
 
-                {/* Number */}
-                <div className="absolute right-7 top-7 text-xs font-semibold tracking-[0.2em] text-[#B4C9CD]">
-                  {benefit.number}
-                </div>
+      <p
+        className="
+          mt-3
+          min-h-[72px]
+          text-[14px]
+          leading-[1.7]
+          text-[#71858A]
+        "
+      >
+        {benefit.description}
+      </p>
+    </div>
+  </motion.div>
+))}
+        </motion.div>
 
-                {/* Icon */}
-                <div
-                  className={`relative flex h-14 w-14 items-center justify-center
-                    rounded-2xl text-xl transition-all duration-500
-                    group-hover:scale-105 group-hover:text-white
-                    ${styles.icon}`}
-                >
-                  {benefit.icon}
-                </div>
 
-                {/* Content */}
-                <div className="relative mt-8">
-                  <h3 className="font-headline-md text-headline-md leading-tight text-[#123B4A]">
-                    {benefit.title}
-                  </h3>
+        {/* Bottom text */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mx-auto mt-12 max-w-xl text-center text-sm leading-6 text-[#71858A]"
+        >
+          Simple tools that help your clinic spend less time managing work
+          and more time focusing on people.
+        </motion.p>
 
-                  <p className="mt-4 text-body-md leading-6 text-[#668087]">
-                    {benefit.description}
-                  </p>
-                </div>
-
-                {/* Bottom coastal accent */}
-                <div
-                  className={`absolute bottom-0 left-8 right-8 h-[3px]
-                    origin-left scale-x-0 rounded-full
-                    transition-transform duration-500
-                    group-hover:scale-x-100 ${styles.line}`}
-                />
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Bottom statement */}
-        <div className="mt-12 flex items-center justify-center gap-4 text-sm text-[#769096]">
-          <span className="h-px w-12 bg-[#D3E3E1]" />
-
-          <span>
-            Better tools. Better experiences. Better outcomes.
-          </span>
-
-          <span className="h-px w-12 bg-[#D3E3E1]" />
-        </div>
       </div>
     </section>
   );

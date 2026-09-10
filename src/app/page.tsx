@@ -15,8 +15,8 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <TrustedBy />
       <ServicesBento />
+       <TrustedBy />
       <Process/>
       <Testimonials/>
       <SupportCTA />
