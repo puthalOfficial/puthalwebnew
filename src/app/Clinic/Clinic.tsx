@@ -32,9 +32,6 @@ export default function ClinicHero() {
       </button>
       <ClinicModal open={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-      <button className="rounded-xl border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-700 hover:bg-slate-100 transition">
-        Learn More
-      </button>
     </div>
 
    

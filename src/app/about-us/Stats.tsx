@@ -1,6 +1,5 @@
 const stats = [
   { value: "12k+", label: "Active Users" },
-  { value: "50+", label: "Global Experts" },
   { value: "24/7", label: "AI Support" },
   { value: "100%", label: "Data Secure" },
 ];
