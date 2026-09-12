@@ -323,10 +323,6 @@ export default function MissionValues() {
   href="#"
 >
   Explore Your Wellness Tools
-
-  <span className="material-symbols-outlined text-[14px]">
-    arrow_forward
-  </span>
 </a>
 
 

@@ -132,7 +132,7 @@ export default function ContactPage() {
                     href="tel:+919999999999"
                     className="mt-1 block font-medium hover:underline"
                   >
-                    +91 99999 99999
+                    +91 7724816439
                   </a>
                 </div>
               </div>
