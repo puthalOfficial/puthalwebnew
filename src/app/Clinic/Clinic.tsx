@@ -10,14 +10,6 @@ export default function ClinicHero() {
 
   return (
     <section className="relative isolate w-full overflow-hidden bg-[#F8FBFF] py-10 md:py-14">
-      {/* Background Glow */}
-      <motion.div
-        className="pointer-events-none absolute -top-20 left-1/4 -z-10 h-72 w-72 rounded-full bg-cyan-200/40 blur-3xl"
-        initial={{y:20}}
-        animate={{y:0}}
-        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-      />
-
       {/* 1. Badge: Scale + Fade */}
       <div className="mx-auto max-w-6xl px-6 text-center">
         <motion.div
