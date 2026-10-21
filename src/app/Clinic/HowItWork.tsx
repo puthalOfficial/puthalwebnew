@@ -42,7 +42,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="relative overflow-hidden bg-white py-28">
+    <section className="relative overflow-hidden bg-white py-18">
 
       {/* Background Glow */}
       <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-cyan-200/20 blur-[120px]" />
@@ -52,10 +52,6 @@ export default function HowItWorks() {
 
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-
-          <span className="rounded-full bg-cyan-100 px-5 py-2 text-sm font-semibold text-cyan-700">
-            HOW IT WORKS
-          </span>
 
           <h2 className="mt-8 text-5xl font-bold text-slate-900">
             A Simple Workflow for

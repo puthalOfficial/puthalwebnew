@@ -1,171 +1,285 @@
 
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
-export default function Hero() {
+const ease = [0.22, 1, 0.36, 1] as const;
+
+export default function PuthalHero() {
+  const shouldReduceMotion = useReducedMotion();
+
+  const fadeUp = {
+    hidden: {
+      opacity: 0,
+      y: shouldReduceMotion ? 0 : 26,
+      filter: shouldReduceMotion ? "blur(0px)" : "blur(5px)",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        duration: shouldReduceMotion ? 0.2 : 0.7,
+        ease,
+      },
+    },
+  };
+
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: shouldReduceMotion ? 0 : 0.15,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const imageReveal = {
+    hidden: {
+      opacity: 0,
+      x: shouldReduceMotion ? 0 : 40,
+      scale: shouldReduceMotion ? 1 : 0.96,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: shouldReduceMotion ? 0.2 : 0.9,
+        delay: shouldReduceMotion ? 0 : 0.2,
+        ease,
+      },
+    },
+  };
+
   return (
-    <section className="w-full overflow-hidden">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-12 sm:px-6 sm:py-16 md:px-10 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-24">
+    <section className="relative w-full overflow-hidden bg-white">
+      {/* Ambient background decoration */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-cyan-100/50 blur-3xl"
+      />
 
-        {/* Left Content */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 top-0 h-80 w-80 rounded-full bg-sky-100/40 blur-3xl"
+      />
+
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-14 sm:px-6 sm:py-16 md:px-10 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-24">
+
+        {/* LEFT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          variants={container}
+          initial="hidden"
+          animate="visible"
           className="flex w-full flex-col items-center text-center lg:items-start lg:text-left"
         >
           {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#9cecfb]/60 bg-[#9cecfb]/30 px-4 py-2"
+            variants={fadeUp}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#9cecfb]/70 bg-[#9cecfb]/25 px-4 py-2 shadow-sm"
           >
-            <span className="h-2 w-2 animate-pulse rounded-full bg-[#006875]" />
+            <span className="relative flex h-2 w-2">
+              {!shouldReduceMotion && (
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#006875] opacity-50" />
+              )}
+              <span className="relative h-2 w-2 rounded-full bg-[#006875]" />
+            </span>
 
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-[#016d7a] sm:text-xs">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#016d7a] sm:text-xs">
               Puthal Wellness
             </span>
           </motion.div>
 
           {/* Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex w-full flex-col items-center text-4xl font-bold leading-[1.08] tracking-tight text-[#023E8A] sm:text-5xl md:text-6xl lg:items-start lg:text-7xl"
+            variants={fadeUp}
+            className="w-full text-4xl font-bold leading-[1.1] tracking-tight text-[#023E8A] sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            <span className="block whitespace-nowrap">
-              Mann ki Uthal
-            </span>
+            <span className="block">Mann ki Uthal</span>
 
-            <span className="mt-1 block whitespace-nowrap text-[#005d90]">
+            <span className="mt-2 block text-[#005d90]">
               Solve on Puthal
             </span>
           </motion.h1>
 
           {/* Description */}
           <motion.p
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
+            variants={fadeUp}
             className="mt-6 max-w-lg text-base leading-7 text-[#404850] sm:text-lg sm:leading-8"
           >
-            Your comprehensive sanctuary for mental wellness. Navigate your
-            emotional journey with professional tools and guided support.
+            Your comprehensive sanctuary for mental wellness. Navigate
+            your emotional journey with professional tools and guided support.
           </motion.p>
 
           {/* Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.7 }}
-            className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4"
+            variants={fadeUp}
+            className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4"
           >
             <motion.button
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-              className="w-full rounded-xl bg-[#005d90] px-7 py-3.5 font-semibold text-white transition-all duration-300 hover:bg-[#004a73] hover:shadow-lg hover:shadow-[#005d90]/30 sm:w-auto sm:px-8 sm:py-4"
+              type="button"
+              whileHover={
+                shouldReduceMotion
+                  ? undefined
+                  : {
+                      y: -3,
+                      scale: 1.035,
+                      boxShadow: "0 14px 30px rgba(0,93,144,0.24)",
+                    }
+              }
+              whileTap={shouldReduceMotion ? undefined : { scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 350, damping: 24 }}
+              className="w-full rounded-xl bg-[#005d90] px-7 py-3.5 font-semibold text-white shadow-md shadow-[#005d90]/10 transition-colors hover:bg-[#004a73] sm:w-auto sm:px-8 sm:py-4"
             >
               Get Started Free
             </motion.button>
 
-            <a href="/about-us" className="w-full sm:w-auto">
-              <motion.button
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.97 }}
-                className="flex w-full items-center justify-center gap-2 rounded-xl border border-gray-300 px-7 py-3.5 font-medium text-gray-700 transition-all duration-300 hover:bg-gray-100 sm:w-auto sm:px-8 sm:py-4"
+            <motion.a
+              href="/about-us"
+              whileHover={shouldReduceMotion ? undefined : { y: -3 }}
+              whileTap={shouldReduceMotion ? undefined : { scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 350, damping: 24 }}
+              className="flex w-full items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white/80 px-7 py-3.5 font-medium text-gray-700 transition-colors hover:border-[#005d90]/40 hover:bg-sky-50 sm:w-auto sm:px-8 sm:py-4"
+            >
+              Watch Our Story
+
+              <motion.span
+                aria-hidden="true"
+                animate={
+                  shouldReduceMotion ? undefined : { x: [0, 3, 0] }
+                }
+                transition={{
+                  duration: 1.8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
-                Watch Our Story
-              </motion.button>
-            </a>
+                →
+              </motion.span>
+            </motion.a>
           </motion.div>
         </motion.div>
 
-        {/* Right Image */}
+        {/* RIGHT IMAGE */}
         <motion.div
-          initial={{ opacity: 0, x: 60, scale: 0.95 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{
-            duration: 0.9,
-            delay: 0.2,
-            ease: "easeOut",
-          }}
+          variants={imageReveal}
+          initial="hidden"
+          animate="visible"
           className="relative mx-auto w-full max-w-md sm:max-w-lg lg:max-w-none"
         >
-          {/* Background Glow */}
+          {/* Animated glow */}
           <motion.div
-            animate={{
-              scale: [1, 1.08, 1],
-              opacity: [0.5, 0.8, 0.5],
-            }}
+            aria-hidden="true"
+            animate={
+              shouldReduceMotion
+                ? undefined
+                : {
+                    scale: [1, 1.1, 1],
+                    opacity: [0.25, 0.45, 0.25],
+                  }
+            }
             transition={{
-              duration: 4,
+              duration: 6,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute inset-0 translate-x-4 -translate-y-4 rounded-full bg-[#006875]/10 blur-3xl sm:translate-x-8 sm:-translate-y-8 lg:translate-x-10 lg:-translate-y-10"
+            className="absolute -inset-5 rounded-[40px] bg-[#006875]/15 blur-3xl sm:-inset-8"
           />
 
-          {/* Image */}
+          {/* Image frame */}
           <motion.div
-            whileHover={{ scale: 1.015 }}
-            transition={{ duration: 0.3 }}
-            className="relative overflow-hidden rounded-[24px] border-4 border-white/50 bg-gray-100 shadow-2xl sm:rounded-[32px]"
+            whileHover={
+              shouldReduceMotion ? undefined : { y: -4, scale: 1.01 }
+            }
+            transition={{ duration: 0.35, ease }}
+            className="relative overflow-hidden rounded-[24px] border-4 border-white/80 bg-gray-100 shadow-2xl shadow-slate-900/10 sm:rounded-[32px]"
           >
-            <img
+            <motion.img
+              initial={
+                shouldReduceMotion ? undefined : { scale: 1.08 }
+              }
+              animate={{ scale: 1 }}
+              transition={{
+                duration: shouldReduceMotion ? 0.2 : 1.4,
+                delay: shouldReduceMotion ? 0 : 0.3,
+                ease,
+              }}
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcwQseehbSoTaIwweXQ4q9RmlDpZKaE46UNxZZ09YxfMt-RdPO0iuCkXdQ60gmwNnsLcV6HhyXH5GY73pJvPiIvh2Xf1baDL5JsbGxwyhUSO4zjtqxOeU6LiiYL-jB-ZlmyqUm0rHcxNJaSkDAZwVhcEM9nzNuQMF-r3bFP5TKVPP6b90J3MNT4d4QHXnQ8TegAqXCL08rrxUmtLrlDileGcEyQ7vNW37IOvHUcHVacObvtBWVlRTkQzngUZtMtS5FmpPg0Wsvnsc"
               alt="Puthal Wellness"
               width={640}
               height={800}
-              className="h-auto w-full object-cover"
+              fetchPriority="high"
+              className="block h-auto w-full object-cover"
             />
           </motion.div>
 
-          {/* Floating Card */}
+          {/* Floating information card */}
           <motion.div
-            initial={{ opacity: 0, y: 30, scale: 0.9 }}
+            initial={{
+              opacity: 0,
+              y: shouldReduceMotion ? 0 : 22,
+              scale: shouldReduceMotion ? 1 : 0.94,
+            }}
             animate={{
               opacity: 1,
-              y: [0, -8, 0],
+              y: shouldReduceMotion ? 0 : [0, -7, 0],
               scale: 1,
             }}
             transition={{
-              opacity: { duration: 0.6, delay: 1 },
-              scale: { duration: 0.6, delay: 1 },
-              y: {
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
+              opacity: {
+                duration: 0.6,
+                delay: shouldReduceMotion ? 0 : 0.8,
               },
+              scale: {
+                duration: 0.6,
+                delay: shouldReduceMotion ? 0 : 0.8,
+              },
+              y: shouldReduceMotion
+                ? { duration: 0.2 }
+                : {
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1.2,
+                  },
             }}
-            className="absolute -bottom-5 left-2 max-w-[calc(100%-1rem)] rounded-2xl border border-white/40 bg-white/90 p-3 shadow-xl backdrop-blur-md sm:-bottom-7 sm:left-4 sm:p-5 lg:-bottom-8 lg:-left-8 lg:p-6"
+            className="absolute -bottom-5 left-2 max-w-[calc(100%-1rem)] rounded-2xl border border-white/70 bg-white/95 p-3 shadow-xl shadow-slate-900/10 backdrop-blur-xl sm:-bottom-7 sm:left-4 sm:p-5 lg:-bottom-8 lg:-left-8 lg:p-6"
           >
             <div className="flex items-center gap-3 sm:gap-4">
-
               {/* Icon */}
-              <div className="flex-shrink-0 rounded-lg bg-lime-200 p-2 sm:p-3">
+              <motion.div
+                animate={
+                  shouldReduceMotion
+                    ? undefined
+                    : { rotate: [0, -5, 5, 0] }
+                }
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="flex-shrink-0 rounded-xl bg-lime-100 p-2.5 sm:p-3"
+              >
                 <span className="material-symbols-outlined text-[#006875]">
                   waves
                 </span>
-              </div>
+              </motion.div>
 
-              {/* Text */}
+              {/* Card content */}
               <div>
                 <p className="text-xs font-semibold text-[#006875] sm:text-sm">
                   Real-time Zen
                 </p>
 
-                <p className="text-sm font-bold text-gray-900 sm:text-base">
+                <p className="mt-0.5 text-sm font-bold text-gray-900 sm:text-base">
                   50+ Experts Active
                 </p>
               </div>
-
             </div>
           </motion.div>
         </motion.div>
-
       </div>
     </section>
   );

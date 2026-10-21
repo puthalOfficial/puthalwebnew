@@ -8,7 +8,7 @@ export default function Stats() {
   return (
     <section className="py-20 bg-[#023E8A] text-white">
       <div className="px-[16px] md:px-[48px] max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-[24px] text-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-[24px] text-center">
           {stats.map((stat) => (
             <div key={stat.label}>
               <div className="text-[48px] leading-[56px] tracking-[-0.02em] font-bold font-[Manrope] mb-2">

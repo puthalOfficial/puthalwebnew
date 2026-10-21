@@ -47,7 +47,7 @@ const benefits = [
 
 export default function BenefitsSection() {
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-28">
+    <section className="relative overflow-hidden bg-slate-50 py-8">
 
      
       <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-cyan-300/20 blur-[120px]" />
@@ -57,11 +57,6 @@ export default function BenefitsSection() {
 
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-
-          <span className="rounded-full bg-cyan-100 px-5 py-2 text-sm font-semibold text-cyan-700">
-            WHO BENEFITS?
-          </span>
-
           <h2 className="mt-8 text-5xl font-bold text-slate-900">
             Built for Everyone in Your
             <span className="text-cyan-600"> Healthcare Ecosystem</span>

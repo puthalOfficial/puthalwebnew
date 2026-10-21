@@ -22,9 +22,9 @@ export default function CTA() {
               Download App
             </button>
 
-            <button className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-xl font-bold text-[14px] leading-[20px] tracking-[0.01em] font-[Inter] hover:bg-white/20 transition-colors active:scale-95">
+            <a href="/contact" className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-xl font-bold text-[14px] leading-[20px] tracking-[0.01em] font-[Inter] hover:bg-white/20 transition-colors active:scale-95">
               Contact Sales
-            </button>
+            </a>
           </div>
         </div>
       </div>

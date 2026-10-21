@@ -40,7 +40,7 @@ const CLINIC_BENEFITS = [
 
 export default function ClinicBenefits() {
   return (
-    <section className="bg-[#F6FAFB] px-margin-mobile py-20 md:px-20 md:py-24">
+    <section className="bg-[#F6FAFB] px-margin-mobile py-20 md:px-20 md:py-4">
       <div className="mx-auto max-w-container-max-width">
 
         {/* Header */}
@@ -51,9 +51,6 @@ export default function ClinicBenefits() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mx-auto mb-14 max-w-2xl text-center"
         >
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#4D899B]">
-            For clinics
-          </p>
 
           <h2 className="font-headline-lg text-[32px] font-semibold leading-[1.18] tracking-[-0.025em] text-[#183F4D] md:text-[42px]">
             Better care for patients.

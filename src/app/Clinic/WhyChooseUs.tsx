@@ -35,7 +35,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-28">
+    <section className="relative overflow-hidden bg-slate-50 py-18">
 
       {/* Background Blur */}
 
@@ -48,10 +48,6 @@ export default function WhyChooseUs() {
         {/* Heading */}
 
         <div className="max-w-3xl mx-auto text-center">
-
-          <span className="rounded-full bg-cyan-100 px-5 py-2 text-sm font-semibold text-cyan-700">
-            WHY CHOOSE PUTHAL WELLNESS
-          </span>
 
           <h2 className="mt-8 text-5xl font-bold text-slate-900">
             Better Care Through

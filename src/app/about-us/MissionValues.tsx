@@ -85,11 +85,11 @@ export default function MissionValues() {
       text-[18px] leading-[28px] font-[400]
       font-['Inter',sans-serif]
       opacity-90
-      max-w-[32rem]
+      max-w-7xl
     "
   >
     Managing anxiety can feel overwhelming. Our experience is designed
-    to feel calm, simple, and supportive — helping you slow down,
+    to feel calm, simple, and supportive  helping you slow down,
     understand your emotions, and take one small step at a time toward
     feeling better.
   </p>

@@ -73,15 +73,10 @@ export default function CoreFeatures() {
 
       <div className="container mx-auto px-6">
 
-        <div className="mx-auto max-w-3xl text-center">
-
-          <span className="rounded-full bg-cyan-100 px-5 py-2 text-sm font-semibold text-cyan-700">
-            CORE FEATURES
-          </span>
+        <div className="mx-auto max-w-4xl text-center">
 
           <h2 className="mt-8 text-5xl font-bold">
-            Everything Your Clinic Needs
-            <span className="text-cyan-600"> to Grow</span>
+            Everything Your Clinic Needs to Grow
           </h2>
 
           <p className="mt-6 text-lg text-slate-500">

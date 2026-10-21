@@ -50,9 +50,6 @@ useEffect(() => {
 
         <div className="text-center">
 
-          <p className="inline-flex rounded-full bg-cyan-50 px-5 py-2 text-cyan-600 font-semibold">
-            Trusted Worldwide
-          </p>
 
           <h2 className="mt-6 text-5xl font-bold text-slate-900">
             Trusted by Modern

@@ -117,19 +117,6 @@ export default function Footer() {
               Newsletter
             </p>
 
-            <div className="mt-2 flex gap-2">
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full rounded-lg bg-[#f7f9fb] px-3 py-2 text-[12px] outline-none"
-              />
-
-              <button className="rounded-lg bg-[#005d90] px-4 py-2 text-white transition hover:opacity-90">
-                <span className="material-symbols-outlined text-[18px]">
-                  send
-                </span>
-              </button>
-            </div>
           </div>
         </div>
       </div>

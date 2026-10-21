@@ -42,7 +42,7 @@ export default function Activities() {
 
 
   return (
-     <section  className="py-20">
+     <section  className="py-10">
         <div className="mx-auto max-w-8xl px-10 lg:px-10">
           <div className="mb-12 text-center">
             <h2 className="text-4xl font-extrabold text-sky-950">
@@ -87,7 +87,7 @@ export default function Activities() {
                 </p>
               </div>
 
-              <button className="rounded-2xl bg-sky-700 px-8 py-4 text-lg font-bold text-white transition hover:bg-sky-800">
+              <button onClick={handleScroll} className="rounded-2xl bg-sky-700 px-8 py-4 text-lg font-bold text-white transition hover:bg-sky-800">
                 Start Now
               </button>
             </div>
