@@ -28,11 +28,11 @@ const gameCards = [
   };
 export default function Stress() {
   return (
-    <div>
-         <section className="py-20">
+    <div className=''>
+         <section className="py-10">
         <div className="mx-auto max-w-8xl px-6 lg:px-10">
           <div className="mb-12 text-center">
-            <h2 className="text-4xl font-extrabold text-sky-950">
+            <h2 className="text-4xl font-bold text-sky-950">
               Stress & IQ Games
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-slate-600">

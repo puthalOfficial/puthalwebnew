@@ -40,7 +40,7 @@ const CLINIC_BENEFITS = [
 
 export default function ClinicBenefits() {
   return (
-    <section className="bg-[#F6FAFB] px-margin-mobile py-20 md:px-20 md:py-4">
+    <section className="bg-[#F6FAFB] px-margin-mobile py-20 px-4 md:px-20 md:py-4">
       <div className="mx-auto max-w-container-max-width">
 
         {/* Header */}

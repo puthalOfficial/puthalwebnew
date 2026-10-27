@@ -7,6 +7,7 @@ import SupportCTA from "./components/SupportCTA";
 import Footer from "./components/Footer";
 import Process from "./components/Process";
 import Testimonials from "./components/Testinomial";
+import RepresentFeature from "./components/RepresentFeature";
 
 export const dynamic = "force-static";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <ServicesBento />
        <TrustedBy />
+       <RepresentFeature/>
       <Process/>
       <Testimonials/>
       <SupportCTA />

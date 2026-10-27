@@ -1,21 +1,22 @@
-
+"use client"
+import { motion } from "framer-motion";
 export default function Services() {
   return (
     <section className="mx-auto w-full max-w-8xl px-4 py-16 sm:px-6 md:px-10 lg:px-16 lg:py-24">
       {/* Heading */}
       <div className="mb-12 flex flex-col items-center justify-center gap-4 text-center lg:mb-16">
-        <h2 className="text-3xl font-bold text-[#023E8A] sm:text-4xl">
+        <motion.h2 initial={{y:40 , opacity:0}} animate={{y:0 , opacity:1}} transition={{duration:0.4 , delay:1}} className="text-3xl font-bold text-[#023E8A] sm:text-4xl">
           Patient Services
-        </h2>
+        </motion.h2>
 
-        <p className="max-w-3xl text-base leading-relaxed text-gray-600 sm:text-lg">
+        <motion.p initial={{y:20 , opacity:0}} animate={{y:0 , opacity:1}} transition={{duration:0.9 , delay:1.4}} className="max-w-3xl text-base leading-relaxed text-gray-600 sm:text-lg">
           Comprehensive mental wellness tools designed to support your
           journey with the rhythmic calm of the ocean.
-        </p>
+        </motion.p>
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+      <motion.div initial={{y:30 , opacity:0}} whileInView={{y:0 , opacity:1}} viewport={{once:true}} transition={{duration:0.5}} className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
         {/* Breathing */}
         <div className="group relative min-h-[320px] overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 transition-all hover:shadow-2xl sm:min-h-[400px] md:col-span-2 lg:col-span-8">
           <img
@@ -110,7 +111,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

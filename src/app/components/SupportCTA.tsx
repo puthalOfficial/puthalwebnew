@@ -1,7 +1,7 @@
 export default function CTA() {
   return (
-    <section className="mx-auto max-w-[1200px] pl-2 py-24 text-center md:px-12">
-      <div className="relative overflow-hidden rounded-[40px] bg-[#023E8A] p-12 md:p-24">
+    <section className="mx-auto max-w-[1200px] pl-2 py-14 text-center md:px-12">
+      <div className="relative overflow-hidden rounded-[40px] bg-[#023E8A] p-7 md:p-24">
         {/* Background Texture */}
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-10" />
 
@@ -10,7 +10,7 @@ export default function CTA() {
             Ready to find your calm
           </h2>
 
-          <p className="mb-12 text-lg leading-8 text-white/80">
+          <p className="mb-12 text-lg leading-6 text-white/80">
             Take a moment for yourself and discover simple ways to calm your mind, reduce stress, and build a healthier daily routine. Start your wellness journey with Puthal and make space for more peace, balance, and clarity in your life
           </p>
 

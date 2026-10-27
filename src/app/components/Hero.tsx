@@ -1,7 +1,7 @@
 
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { delay, motion, useReducedMotion } from "framer-motion";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -19,7 +19,7 @@ export default function PuthalHero() {
       y: 0,
       filter: "blur(0px)",
       transition: {
-        duration: shouldReduceMotion ? 0.2 : 0.7,
+        duration: shouldReduceMotion ? 0.7 : 1,
         ease,
       },
     },
@@ -66,7 +66,7 @@ export default function PuthalHero() {
         className="pointer-events-none absolute right-0 top-0 h-80 w-80 rounded-full bg-sky-100/40 blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-14 sm:px-6 sm:py-16 md:px-10 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-24">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-6 sm:px-6 sm:py-6 md:px-10 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-14">
 
         {/* LEFT CONTENT */}
         <motion.div
@@ -75,22 +75,6 @@ export default function PuthalHero() {
           animate="visible"
           className="flex w-full flex-col items-center text-center lg:items-start lg:text-left"
         >
-          {/* Badge */}
-          <motion.div
-            variants={fadeUp}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#9cecfb]/70 bg-[#9cecfb]/25 px-4 py-2 shadow-sm"
-          >
-            <span className="relative flex h-2 w-2">
-              {!shouldReduceMotion && (
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#006875] opacity-50" />
-              )}
-              <span className="relative h-2 w-2 rounded-full bg-[#006875]" />
-            </span>
-
-            <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#016d7a] sm:text-xs">
-              Puthal Wellness
-            </span>
-          </motion.div>
 
           {/* Heading */}
           <motion.h1
@@ -119,18 +103,7 @@ export default function PuthalHero() {
             className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4"
           >
             <motion.button
-              type="button"
-              whileHover={
-                shouldReduceMotion
-                  ? undefined
-                  : {
-                      y: -3,
-                      scale: 1.035,
-                      boxShadow: "0 14px 30px rgba(0,93,144,0.24)",
-                    }
-              }
-              whileTap={shouldReduceMotion ? undefined : { scale: 0.97 }}
-              transition={{ type: "spring", stiffness: 350, damping: 24 }}
+              type="button"   
               className="w-full rounded-xl bg-[#005d90] px-7 py-3.5 font-semibold text-white shadow-md shadow-[#005d90]/10 transition-colors hover:bg-[#004a73] sm:w-auto sm:px-8 sm:py-4"
             >
               Get Started Free
@@ -172,7 +145,7 @@ export default function PuthalHero() {
           {/* Animated glow */}
           <motion.div
             aria-hidden="true"
-            animate={
+            whileInView={
               shouldReduceMotion
                 ? undefined
                 : {
@@ -180,6 +153,7 @@ export default function PuthalHero() {
                     opacity: [0.25, 0.45, 0.25],
                   }
             }
+            viewport={{once:true}}
             transition={{
               duration: 6,
               repeat: Infinity,
@@ -194,7 +168,7 @@ export default function PuthalHero() {
               shouldReduceMotion ? undefined : { y: -4, scale: 1.01 }
             }
             transition={{ duration: 0.35, ease }}
-            className="relative overflow-hidden rounded-[24px] border-4 border-white/80 bg-gray-100 shadow-2xl shadow-slate-900/10 sm:rounded-[32px]"
+            className="relative overflow-hidden rounded-[24px] border-4 border-white/80 bg-gray-100  shadow-slate-900/10 sm:rounded-[32px]"
           >
             <motion.img
               initial={

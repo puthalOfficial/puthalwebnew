@@ -8,10 +8,10 @@ export default function DoctorMatching() {
     });
   };
   return (
-    <section className="bg-slate-100 py-20">
+    <section className="bg-slate-100 py-10">
         <div className="mx-auto max-w-8xl px-6 lg:px-10">
           <div className="mb-12 text-center">
-            <h2 className="text-4xl font-extrabold text-sky-950">
+            <h2 className="text-4xl font-bold text-sky-950">
               Smart Doctor Matching
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-slate-600">

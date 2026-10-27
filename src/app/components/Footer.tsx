@@ -112,12 +112,6 @@ export default function Footer() {
             +91 7724816439
           </p>
 
-          <div className="mt-6">
-            <p className="font-[Inter] text-[12px] font-bold leading-[16px] text-[#023E8A]">
-              Newsletter
-            </p>
-
-          </div>
         </div>
       </div>
 

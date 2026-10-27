@@ -1,5 +1,7 @@
+"use client";
 
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 type Testimonial = {
   quote: string;
@@ -46,7 +48,7 @@ function Stars({ light = false }: { light?: boolean }) {
           className={
             light
               ? "fill-white text-white"
-              : "fill-lime-400 text-lime-400"
+              : "fill-amber-300 text-amber-300"
           }
         />
       ))}
@@ -56,8 +58,7 @@ function Stars({ light = false }: { light?: boolean }) {
 
 export default function Testimonials() {
   return (
-    <section className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-10">
-      
+    <section className="w-full bg-gray-100 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       {/* Heading */}
       <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
         <h2 className="font-[Manrope] text-3xl font-bold tracking-tight text-[#023E8A] sm:text-4xl lg:text-5xl">
@@ -70,78 +71,47 @@ export default function Testimonials() {
         </p>
       </div>
 
-      {/* Testimonials */}
-      <div className="mx-auto grid max-w-8xl px-5 grid-cols-1 items-stretch gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-        {TESTIMONIALS.map((t) =>
-          t.variant === "dark" ? (
-            /* Dark Card */
-            <div
-              key={t.name}
-              className="flex h-full min-h-[300px] flex-col rounded-3xl bg-[#0077B6] p-5 text-white shadow-2xl shadow-[#0077B6]/20 transition-transform duration-300 hover:-translate-y-1 sm:min-h-[320px] sm:p-7 lg:p-8"
-            >
-              {/* Stars */}
-              <Stars light />
+      {/* Testimonial Cards */}
+     <div className="mx-auto grid max-w-8xl grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+  {TESTIMONIALS.map((t, index) => {
+    const isDark = t.variant === "dark";
 
-              {/* Quote */}
-              <p className="mb-6 flex-1 text-[15px]  leading-7 text-white/90 sm:text-base sm:leading-8">
-                {t.quote}
-              </p>
+    return (
+      <motion.div
+        key={t.name}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          duration: 0.6,
+          delay: index * 0.15,
+          ease: "easeOut",
+        }}
+        className={`group flex h-full min-h-[300px] flex-col rounded-3xl border p-6 transition-shadow duration-300 sm:min-h-[220px] sm:p-7 lg:p-8 ${
+          isDark
+            ? "border-[#0077B6] bg-[#0077B6] text-white shadow-lg shadow-[#0077B6]/15 hover:shadow-xl hover:shadow-[#0077B6]/25"
+            : "border-gray-100 bg-white text-gray-900 shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.09)]"
+        }`}
+      >
+        {/* Stars */}
+        <div className="mb-5">
+          <Stars light={isDark} />
+        </div>
 
-              {/* User */}
-              <div className="flex min-h-[56px] items-center gap-3 sm:gap-4">
-                {/* Avatar */}
-                <div
-                  className={`h-10 w-10 shrink-0 rounded-full sm:h-12 sm:w-12 ${t.avatarClass}`}
-                />
+        {/* Quote */}
+        <p
+          className={`flex-1 text-xl leading-7 sm:text-base sm:leading-8 ${
+            isDark ? "text-white/90" : "text-gray-600"
+          }`}
+        >
+          {t.quote}
+        </p>
 
-                {/* Name / Role */}
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-sm font-semibold sm:text-base">
-                    {t.name}
-                  </p>
-
-                  <p className="truncate text-xs text-white/70 sm:text-sm">
-                    {t.role}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ) : (
-            /* Light Card */
-            <div
-              key={t.name}
-              className="flex h-full min-h-[300px] flex-col rounded-3xl bg-white p-5 shadow-lg ring-1 ring-gray-100 transition-transform duration-300 hover:-translate-y-1 sm:min-h-[320px] sm:p-7 lg:p-8"
-            >
-              {/* Stars */}
-              <Stars />
-
-              {/* Quote */}
-              <p className="mb-6 flex-1 text-[15px]  leading-7 text-gray-700 sm:text-base sm:leading-8">
-                {t.quote}
-              </p>
-
-              {/* User */}
-              <div className="flex min-h-[56px] items-center gap-3 sm:gap-4">
-                {/* Avatar */}
-                <div
-                  className={`h-10 w-10 shrink-0 rounded-full sm:h-12 sm:w-12 ${t.avatarClass}`}
-                />
-
-                {/* Name / Role */}
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-sm font-semibold text-gray-900 sm:text-base">
-                    {t.name}
-                  </p>
-
-                  <p className="truncate text-xs text-gray-500 sm:text-sm">
-                    {t.role}
-                  </p>
-                </div>
-              </div>
-            </div>
-          )
-        )}
-      </div>
+       
+      </motion.div>
+    );
+  })}
+</div>
     </section>
   );
 }
