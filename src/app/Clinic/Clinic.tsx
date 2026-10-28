@@ -9,20 +9,10 @@ export default function ClinicHero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative isolate w-full overflow-hidden bg-[#F8FBFF] py-10 md:py-14">
+    <section className="relative isolate w-full overflow-hidden bg-[#F8FBFF] py-10 md:py-4">
       {/* 1. Badge: Scale + Fade */}
       <div className="mx-auto max-w-6xl px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y:10 }}
-          animate={{ opacity: 1, y:0 }}
-          transition={{ duration: 0.7, ease: "backOut" }}
-          className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-sm font-semibold text-cyan-700 shadow-sm"
-        >
-          <motion.span
-            className="h-2 w-2 rounded-full bg-cyan-500"
-          />
-          Smart Healthcare Platform
-        </motion.div>
+        
 
         {/* 2. First heading line: Slide from left */}
         <motion.h1

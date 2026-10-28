@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Process from "./components/Process";
 import Testimonials from "./components/Testinomial";
 import RepresentFeature from "./components/RepresentFeature";
+import HomePateint from "./patient-services/HomePateint";
 
 export const dynamic = "force-static";
 
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
+    <HomePateint/>
       <ServicesBento />
        <TrustedBy />
        <RepresentFeature/>

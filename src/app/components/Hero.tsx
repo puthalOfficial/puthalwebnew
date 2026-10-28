@@ -66,7 +66,7 @@ export default function PuthalHero() {
         className="pointer-events-none absolute right-0 top-0 h-80 w-80 rounded-full bg-sky-100/40 blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-6 sm:px-6 sm:py-6 md:px-10 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-14">
+      <div className="relative mx-auto grid max-w-8xl grid-cols-1 items-center gap-12 px-4 py-6 sm:px-6 sm:py-6 md:px-10 lg:grid-cols-2 lg:gap-11 lg:px-26 lg:py-14">
 
         {/* LEFT CONTENT */}
         <motion.div
