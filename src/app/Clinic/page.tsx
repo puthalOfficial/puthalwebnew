@@ -13,9 +13,9 @@ export default function Clinicpage() {
     <>
     <Navbar/> 
     <Clinic/>
-    <TrustedSection/>
     <WhyChooseUs/>
     <CoreFeatures/>
+     <TrustedSection/>
     <HowItWorks/>
     <BenefitsSection/>
     <Footer/>

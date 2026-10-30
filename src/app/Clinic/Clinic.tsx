@@ -9,9 +9,9 @@ export default function ClinicHero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative isolate w-full overflow-hidden bg-[#F8FBFF] py-10 md:py-4">
+    <section className="relative isolate w-full overflow-hidden bg-[#F8FBFF] py-8 md:py-8">
       {/* 1. Badge: Scale + Fade */}
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-7xl md:space-y-10 px-1 text-center">
         
 
         {/* 2. First heading line: Slide from left */}
@@ -19,7 +19,7 @@ export default function ClinicHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="mt-6 text-4xl font-black leading-tight tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl"
+          className="mt-2 text-3xl font-black  text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl"
         >
           Smart Clinic Management
         </motion.h1>
@@ -29,7 +29,7 @@ export default function ClinicHero() {
           initial={{ opacity: 0,y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-          className="mt-2"
+          className=""
         >
           <span className="bg-gradient-to-r from-[#005d90] via-cyan-600 to-[#005d90] bg-clip-text text-4xl font-black leading-tight text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
             Solutions
@@ -41,7 +41,7 @@ export default function ClinicHero() {
           initial={{ opacity: 0, y: 35, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.9, delay: 0.65, ease: "easeOut" }}
-          className="mx-auto mt-8 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg md:text-xl"
+          className="mx-auto mt-2 max-w-6xl text-base leading-6 md:leading-10  text-slate-600 sm:text-lg md:text-3xl"
         >
           Transform your clinic with an all-in-one healthcare platform designed
           to automate operations, simplify appointment management, increase
@@ -58,7 +58,7 @@ export default function ClinicHero() {
             stiffness: 150,
             damping: 12,
           }}
-          className="mt-10 flex justify-center"
+          className="mt-6 flex justify-center"
         >
           <motion.button
             type="button"
