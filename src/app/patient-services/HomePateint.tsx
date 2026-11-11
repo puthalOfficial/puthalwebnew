@@ -6,13 +6,13 @@ export default function HomePateint () {
       <div className="relative isolate mx-auto min-h-[600px] max-w-8xl overflow-hidden rounded-3xl sm:min-h-[500px] lg:min-h-[560px]">
         {/* Background image */}
         <img
-          src="/stressimage.png"
+          src="https://res.cloudinary.com/dvogl4c7a/image/upload/v1794381516/stressimage_usdimz.avif"
           alt="A person experiencing mental stress"
           className="absolute hidden md:block inset-0 -z-20 h-full w-full object-cover object-center"
         />
         
         <img
-          src="https://res.cloudinary.com/dvogl4c7a/image/upload/v1794381516/stressimage_usdimz.avif"
+          src="/stressimagemo1.png"
           alt="A person experiencing mental stress"
           className="absolute block md:hidden inset-0 -z-20 h-full w-full object-cover object-center"
         />
