@@ -12,7 +12,7 @@ export default function HomePateint () {
         />
         
         <img
-          src="/stressimagemo1.png"
+          src="https://res.cloudinary.com/dvogl4c7a/image/upload/v1794381948/stressimagemo1_re5yqd.png"
           alt="A person experiencing mental stress"
           className="absolute block md:hidden inset-0 -z-20 h-full w-full object-cover object-center"
         />
